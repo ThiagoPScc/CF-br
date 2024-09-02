@@ -1,0 +1,187 @@
+.CAPA {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    background: url('img/capa.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Coloca a capa acima do cabeçalho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	font-family: "Bebas Neue", sans-serif;
+    cursor: pointer;
+	font-style:italic;
+	letter-spacing: 0.5rem;
+	transition: transform 1s ease;
+	background-color:#1E1E1E;
+	overflow: hidden;
+}
+ header.show {
+    display: block; /* Mostra o cabeçalho quando a classe show é adicionada */
+}		
+.CAPA.slide-up {
+    transform: translateY(-100%); /* Move a capa para fora da tela */
+}
+ .fundoPneu {
+    position: absolute;
+    top: -12%; /* Posição superior relativa ao tamanho da tela */
+	height: 100%;
+    left: 10%; /* Posição à esquerda relativa ao tamanho da tela */
+    width: 15%; /* Largura da imagem em % da largura da tela */
+    max-width: 400px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    }
+.titulo{
+	position: absolute;
+    top: 25%; /* Posição superior relativa ao tamanho da tela */
+    left: 0; /* Posição à esquerda relativa ao tamanho da tela */
+    width:40%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	}
+.base {
+    position: absolute;
+    top: 92%; /* Centraliza verticalmente */
+    left: 10%; /* Começa fora da tela à esquerda */
+    height: 10%;
+    transform: translateY(-50%);
+    animation: base 20s linear infinite; /* Define a animação */
+    }
+@keyframes base {
+    0% {
+        left: -60%; /* Ponto inicial fora da tela à direita */
+    }
+    100% {
+        left: 0%; /* Ponto final fora da tela à esquerda */
+    }
+}
+.txtPer{
+	position: absolute;
+    top: 5%; /* Posição superior relativa ao tamanho da tela */
+    left: 25%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:25%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	animation: txtPer 3s ease-in-out infinite;
+	
+}
+@keyframes txtPer {
+	0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.blocoArma{
+	position: absolute;
+    top: 14%; /* Posição superior relativa ao tamanho da tela */
+    right:3%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:50%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.blocoPonte{
+	position: absolute;
+    top: 53%; /* Posição superior relativa ao tamanho da tela */
+    right:0; /* Posição à esquerda relativa ao tamanho da tela */
+    width:50%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.blocoTxt{
+	position: absolute;
+	top:68%;
+	right:25%;
+	height:5.5%;
+	width:2%;
+	background-color:#1E1E1E;
+	transition: width 0.5s ease;
+}
+.blocoTxt:hover{
+	position: absolute;
+	top:68%;
+	right:25%;
+	height:5.5%;
+	width:24%;
+	background-color:#1E1E1E;
+}
+.txtFim{
+	position: absolute;
+	top:68.2%;
+	right:28%;
+	color:white;
+	font-size:2em;
+	z-index:2;
+}
+.blocoSuperior{
+	position: absolute;
+    top: 5%; /* Posição superior relativa ao tamanho da tela */
+    right: 5%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:40%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.carregando{
+	position: absolute;
+    top: 6.2%; /* Posição superior relativa ao tamanho da tela */
+    right: 25%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:1.3%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	animation: girar 2s linear infinite;
+}
+@keyframes girar {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.bolaPisca1{
+	position: absolute;
+    top: 6.2%; /* Posição superior relativa ao tamanho da tela */
+    right: 28%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:1.3%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	animation: bola1 2s ease-in-out infinite;
+}
+@keyframes bola1 {
+	0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.bolaPisca2{
+	position: absolute;
+    top: 6.2%; /* Posição superior relativa ao tamanho da tela */
+    right: 30%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:1.3%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	animation: bola2 3s ease-in-out infinite;
+}
+@keyframes bola2 {
+	0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.bolaPisca3{
+	position: absolute;
+    top: 6.2%; /* Posição superior relativa ao tamanho da tela */
+    right: 32%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:1.3%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	animation: bola3 5s ease-in-out infinite;
+}
+@keyframes bola3 {
+	0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.bolaAnda{
+	position: absolute;
+    top: 6.2%; /* Posição superior relativa ao tamanho da tela */
+    right: 43%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:1.3%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+	 animation: bolaA 5s linear infinite;
+}
+@keyframes bolaA {
+	0% { transform: translateX(); }
+    50% { transform: translateX(600%); }
+	100% { transform: translateX(0); }
+}
+.cont{
+	position: absolute;
+    top: 40%; /* Posição superior relativa ao tamanho da tela */
+    right: 19%; /* Posição à esquerda relativa ao tamanho da tela */
+    width:31%; /* Largura da imagem em % da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
