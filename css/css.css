@@ -10,6 +10,7 @@ padding:0px;
 }
 
 header {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,45 +22,93 @@ header {
     left: 0;
     width: 100%;
     transition: opacity 0.5s ease;
- }
- .nav-links {
+}
 
+/* Estilos dos links de navegação */
+.nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     flex-grow: 1;
-
-
-}
-@media (max-width: 768px) {
-    header a {
-        font-size: 1.5em;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
 }
 
-header a{
-    text-decoration: none;
+/* Estilos do botão de alternar modo */
+.toggle-button {
+    background: none;
+    border: none;
     color: #E81111;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 2.2em;
-    transition: color 0.3s ease;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 2; /* Garante que o botão esteja acima do menu */
 }
-header a:hover{
-            color: #910b38;
-        }
+
+/* Estilos do botão de menu hambúrguer */
+.menu-button {
+    display: none; /* Inicialmente escondido */
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #E81111;
+    cursor: pointer;
+    z-index: 2; /* Garante que o botão esteja acima do menu */
+}
+
+/* Estilos do menu lateral no modo mobile */
+.mobile-menu {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1; /* Ajuste o z-index conforme necessário */
+}
+
+.mobile-menu a {
+    color: #E81111;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    color: #910b38;
+}
+
+/* Estilos do menu lateral visível quando clicado */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta os links da navegação em telas pequenas */
+    }
+    
+    .menu-button {
+        display: block; /* Mostra o botão de hambúrguer em telas pequenas */
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none; /* Garante que o menu de hambúrguer não seja exibido em telas grandes */
+    }
+}
 body {
-            margin: 5vh 5% 0% 5%;
             background-color: white;
             color: black;
             transition: background-color 0.3s, color 0.3s;
         }
+		.corpo{
+		margin: 5vh 5% 0% 5%;}
 img.light-mode {
             display: block;
     }
@@ -96,6 +145,26 @@ img.light-mode {
             z-index: 1000;
             align-self: center;
         }
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+	z-index:1;
+}
 
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Cor do fundo da área de rolagem */
+	z-index:1;
+}
 
-  
+::-webkit-scrollbar-thumb {
+    background: #E81111; /* Cor inicial da parte que desliza */
+    border-radius: 50px;
+	border: solid #f0f0f0 3px;
+    margin: 0px 5px;
+	z-index:1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c81010; /* Cor da parte que desliza quando o mouse está sobre ela */
+	z-index:1;
+}
+

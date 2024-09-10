@@ -6,7 +6,7 @@
     height: 100vh; 
     background: url('img/capa.jpg') no-repeat center center;
     background-size: cover;
-    z-index: 1; /* Coloca a capa acima do cabeçalho */
+    z-index: 2; /* Coloca a capa acima do cabeçalho */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,6 @@
 	height: 100%;
     left: 10%; /* Posição à esquerda relativa ao tamanho da tela */
     width: 15%; /* Largura da imagem em % da largura da tela */
-    max-width: 400px; /* Largura máxima da imagem */
     height: auto; /* Mantém a proporção da imagem */
     }
 .titulo{
@@ -103,11 +102,10 @@
 }
 .txtFim{
 	position: absolute;
-	top:68.2%;
-	right:28%;
-	color:white;
-	font-size:2em;
-	z-index:2;
+	top:68%;
+	right:27%;
+	width:17%;
+	height: auto;
 }
 .blocoSuperior{
 	position: absolute;
@@ -185,3 +183,39 @@
     width:31%; /* Largura da imagem em % da largura da tela */
     height: auto; /* Mantém a proporção da imagem */
 }
+.gifFundo {
+    position: relative; /* Tornar o contêiner de fundo relativo para o posicionamento absoluto interno */
+    width: 100%;
+    height: 60vh;
+    box-shadow: inset 0 0 50px white;
+}
+
+.fundoGif {
+    width: 100%;
+    height: 110%;
+    object-fit: cover; /* Garantir que o GIF cubra toda a área */
+}
+
+#textoGif {
+    position: absolute; /* Posicionar o texto sobre o GIF */
+    background-color: rgba(100, 100, 100, 0.3);
+    width: 40%;
+    height: 40vh;
+    color: white;
+    top: 60%; /* Posicionar verticalmente no meio do contêiner */
+    left: 30%; /* Posicionar horizontalmente no meio do contêiner */
+    transform: translate(-50%, -50%); /* Centralizar o bloco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em; /* Adicionar um pouco de espaço interno */
+    box-sizing: border-box; /* Incluir padding e border no cálculo de largura e altura */
+	box-shadow: 0px 0px 10px #1E1E1E;
+}
+
+.txtV {
+    margin: 0; /* Remover a margem padrão do <p> */
+    text-align: center; /* Centralizar o texto */
+}
+	
+	
