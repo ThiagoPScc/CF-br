@@ -31,27 +31,23 @@ header {
     align-items: center;
     gap: 20px;
     flex-grow: 1;
-}
-
-/* Estilos do botão de alternar modo */
-.toggle-button {
-    background: none;
-    border: none;
-    color: #E81111;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 2; /* Garante que o botão esteja acima do menu */
+	font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:2em;
 }
 
 /* Estilos do botão de menu hambúrguer */
 .menu-button {
-    display: none; /* Inicialmente escondido */
-    font-size: 2em;
-    background: none;
+    font-size: 24px;
+    background-color: transparent;
     border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     color: #E81111;
     cursor: pointer;
-    z-index: 2; /* Garante que o botão esteja acima do menu */
+    z-index: 4; /* Garante que o botão esteja acima do menu */
 }
 
 /* Estilos do menu lateral no modo mobile */
@@ -63,18 +59,21 @@ header {
     width: 250px;
     height: 100%;
     background-color: #1E1E1E;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    z-index: 1; /* Ajuste o z-index conforme necessário */
+    z-index: 3; /* Certifica que o menu lateral esteja abaixo dos botões principais */
 }
 
+/* Links do menu lateral */
 .mobile-menu a {
     color: #E81111;
     font-size: 1.5em;
     text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .mobile-menu a:hover {
@@ -97,9 +96,14 @@ header {
     }
 }
 
+/* Media query para telas grandes */
 @media (min-width: 769px) {
     .mobile-menu {
-        display: none; /* Garante que o menu de hambúrguer não seja exibido em telas grandes */
+        display: none; /* Garante que o menu lateral não apareça em telas grandes */
+    }
+
+    .menu-button {
+        display: none; /* Esconde o botão de hambúrguer em telas grandes */
     }
 }
 body {
@@ -135,14 +139,14 @@ img.light-mode {
         }
 		.toggle-button {
             position: fixed;
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
+            top: 1%;
+            right: 3%;
+            padding: 5px 10px;
             background-color: #000;
             color: #fff;
             border: none;
             cursor: pointer;
-            z-index: 1000;
+            z-index: 4;
             align-self: center;
         }
 ::-webkit-scrollbar {

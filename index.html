@@ -53,7 +53,7 @@
     <!-- Cabeçalho -->
 <header class="header">
     <a href="#home">
-        <img style="position: fixed; top: 0.3em; left: 5%; width: 5%;" src="img/logo.png">
+        <img style="position: fixed; top: 0.5em; left: 5%; width: 5.5em;" src="img/logo.png">
     </a>
     <nav class="nav-links">
         <a class="links" href="#about">início</a>
@@ -61,18 +61,22 @@
         <a class="links" href="#contact">criação de personagem</a>
         <a class="links" href="#contact">habilidades e passivas</a>
     </nav>
+	
     <button class="toggle-button" onclick="toggleMode()">O</button> <!-- Botão para alternar entre modo escuro e claro -->
-    <button class="menu-button" onclick="toggleMenu()">☰</button> <!-- Botão de menu hambúrguer -->
-    <div class="mobile-menu">
-        <a class="links" href="#about">início</a>
-        <a class="links" href="#contact">mundo</a>
-        <a class="links" href="#contact">criação de personagem</a>
-        <a class="links" href="#contact">habilidades e passivas</a>
-    </div>
+     <!-- Botão de menu hambúrguer -->
+   <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+	
+	<div class="mobile-menu">
+		<a class="links" href="#about">Início</a>
+		<a class="links" href="#world">Mundo</a>
+		<a class="links" href="#character-creation">Criação de Personagem</a>
+		<a class="links" href="#skills-passives">Habilidades e Passivas</a>
+	</div>
 </header>
 	  <div class="gifFundo">
 		<div id ="textoGif">
-			<P class="txtV"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget iaculis libero. Praesent non dignissim neque, eget varius tellus. Maecenas a arcu lacus. Ut hendrerit, odio at porttitor hendrerit, ex turpis porttitor justo, eget pulvinar elit neque in metus. Integer sed feugiat orci, in tempus dolor. Phasellus justo libero, vestibulum nec justo id, iaculis facilisis est. Praesent fringilla ipsum ex, quis sollicitudin ligula varius sed. Mauris convallis vel metus non varius. Ut cursus turpis ornare maximus varius. Vivamus convallis, orci eu finibus pellentesque, massa diam sagittis enim, sit amet hendrerit turpis elit nec justo. Nullam vitae nulla hendrerit, facilisis lorem id, pretium ex. Nunc ut nibh purus. Maecenas sollicitudin at quam quis semper. Nunc eu massa sed neque molestie ultricies sed quis ex.</p>
+			<P class="txtV"> Lorem ipsum dolor sit amet, ursus turpis ornare maxic justo. Nullam vitae nulla hendrerit, facilisis lorem id, pretium ex. Nunc ut nibh purus. Maecenas sollicitudin at quam quis semper. Nunc eu massa sed neque molestie ultricies sed quis ex.</p>
 		</div>
 		<img class="fundoGif" src="img/fundo.gif">
 	  </div>
@@ -106,24 +110,27 @@
 function toggleMenu() {
     var menu = document.querySelector('.mobile-menu');
     var navLinks = document.querySelector('.nav-links');
-    
+
     menu.classList.toggle('show');
-    
-    // Se o menu lateral estiver visível, oculta o menu de navegação padrão e vice-versa
+
+    // Se o menu lateral estiver visível e a tela for pequena, oculta o menu de navegação padrão
     if (menu.classList.contains('show')) {
         navLinks.style.display = 'none';
     } else {
-        navLinks.style.display = 'flex';
+        // Verifica o tamanho da janela para garantir que os links só reapareçam em telas maiores
+        if (window.innerWidth >= 768) {
+            navLinks.style.display = 'flex';
+        }
     }
 }
 
 // Carrega o modo escuro ao iniciar a página
-window.onload = function() {
-    const darkMode = localStorage.getItem('darkMode') === 'true';
-    if (darkMode) {
-        document.body.classList.add('dark-mode');
-    }
-}
+	window.onload = function() {
+		const darkMode = localStorage.getItem('darkMode') === 'true';
+		if (darkMode) {
+			document.body.classList.add('dark-mode');
+		}
+	}
 
     </script>
 
