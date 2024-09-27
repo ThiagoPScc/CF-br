@@ -1,174 +1,104 @@
-*{
-margin:0px;
-padding:0px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-header {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    height: 5vh;
-    background-color: #1E1E1E;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: opacity 0.5s ease;
-}
-
-/* Estilos dos links de navegação */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-grow: 1;
-	font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:2em;
-}
-
-/* Estilos do botão de menu hambúrguer */
-.menu-button {
-    font-size: 24px;
-    background-color: transparent;
-    border: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    color: #E81111;
-    cursor: pointer;
-    z-index: 4; /* Garante que o botão esteja acima do menu */
-}
-
-/* Estilos do menu lateral no modo mobile */
-.mobile-menu {
-    display: none; /* Inicialmente escondido */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #1E1E1E;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    z-index: 3; /* Certifica que o menu lateral esteja abaixo dos botões principais */
-}
-
-/* Links do menu lateral */
-.mobile-menu a {
-    color: #E81111;
-    font-size: 1.5em;
-    text-decoration: none;
     font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.mobile-menu a:hover {
-    color: #910b38;
+#logo {
+    min-width: 80px;
+    width: 5%;
+    margin: 0px 10%;
 }
 
-/* Estilos do menu lateral visível quando clicado */
-.mobile-menu.show {
-    display: flex;
+#txtLink {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5em;
+    color: #E81111; /* Cor do link em modo claro */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave de cor */
 }
 
-/* Media query para telas menores */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Oculta os links da navegação em telas pequenas */
-    }
-    
-    .menu-button {
-        display: block; /* Mostra o botão de hambúrguer em telas pequenas */
-    }
+#txtLink:hover {
+    color: #B41C37; /* Cor ao passar o mouse sobre o link */
 }
 
-/* Media query para telas grandes */
-@media (min-width: 769px) {
-    .mobile-menu {
-        display: none; /* Garante que o menu lateral não apareça em telas grandes */
-    }
-
-    .menu-button {
-        display: none; /* Esconde o botão de hambúrguer em telas grandes */
-    }
-}
 body {
-            background-color: white;
-            color: black;
-            transition: background-color 0.3s, color 0.3s;
-        }
-		.corpo{
-		margin: 5vh 5% 0% 5%;}
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.corpo {
+    margin: 5vh 5% 0% 5%;
+}
+
 img.light-mode {
-            display: block;
-    }
+    display: block;
+}
 
-        img.dark-mode {
-            display: none;
-        }
-		 body.dark-mode {
-            background-color: #121212;
-            color: #1E1E1E;
-        }
+img.dark-mode {
+    display: none;
+}
 
-        body.dark-mode header {
-            background-color: white;
-            color: #1E1E1E;
-        }
+body.dark-mode {
+    background-color: #1E1E1E;
+    color: white; /* Cor do texto em modo escuro */
+}
 
-        body.dark-mode img.light-mode {
-            display: none;
-        }
+body.dark-mode #txtLink {
+    color: #1E1E1E; /* Cor do link em modo escuro */
+}
 
-        body.dark-mode img.dark-mode {
-            display: block;
-        }
-		.toggle-button {
-            position: fixed;
-            top: 1%;
-            right: 3%;
-            padding: 5px 10px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            z-index: 4;
-            align-self: center;
-        }
+body.dark-mode #txtLink:hover {
+    color: #E81111; /* Cor do link ao passar o mouse em modo escuro */
+}
+
+body.dark-mode img.light-mode {
+    display: none;
+}
+
+body.dark-mode img.dark-mode {
+    display: block;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 1.5%;
+    right: 15%;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+    align-self: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 ::-webkit-scrollbar {
     width: 12px; /* Largura da barra de rolagem */
-	z-index:1;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar-track {
     background: #f0f0f0; /* Cor do fundo da área de rolagem */
-	z-index:1;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #E81111; /* Cor inicial da parte que desliza */
     border-radius: 50px;
-	border: solid #f0f0f0 3px;
+    border: solid #f0f0f0 3px;
     margin: 0px 5px;
-	z-index:1;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #c81010; /* Cor da parte que desliza quando o mouse está sobre ela */
-	z-index:1;
+    z-index: 1;
 }
-

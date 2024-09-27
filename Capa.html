@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página do RPG CyberFunk-BR, aqui está o futuro distópico do Brasil.">
+    <meta name="keywords" content="CyberFunk, RPG, Brasil, cyberpunk">
+    <meta name="robots" content="index, follow">
+    <title>CyberFunk-BR</title>
+    
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+			background-color: #1E1E1E;
+        }
+
+        .CAPA {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; 
+            background: url('img/capa.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Bebas Neue", sans-serif;
+            cursor: pointer;
+            transition: transform 1s ease, opacity 1s ease; /* Adiciona transição para opacidade */
+            background-color: #1E1E1E;
+            opacity: 1; /* Inicialmente visível */
+        }
+
+        /* Outros estilos e animações */
+        .fundoPneu, .titulo, .base, .txtPer, .blocoArma, .blocoPonte,
+        .blocoSuperior, .carregando, .bolaPisca1, .bolaPisca2, .bolaPisca3,
+        .bolaAnda, .cont {
+            position: absolute;
+            height: auto;
+        }
+
+        .txtFim {
+            position: absolute;
+            top: 68%;
+            right: 27%;
+            width: 17%;
+            height: auto;
+            background-color: #1E1E1E;
+            padding: 1%;
+        }
+
+        /* Ajuste de posição */
+        .fundoPneu { top: -12%; left: 10%; width: 15%; }
+        .titulo { top: 25%; left: 0; width: 40%; }
+        .base { top: 92%; left: 10%; height: 10%; transform: translateY(-50%); animation: base 20s linear infinite; }
+        .txtPer { top: 5%; left: 25%; width: 25%; animation: txtPer 3s ease-in-out infinite; }
+        .blocoArma { top: 14%; right: 3%; width: 50%; }
+        .blocoPonte { top: 53%; right: 0; width: 50%; }
+        .blocoSuperior { top: 5%; right: 5%; width: 40%; }
+        .carregando { top: 6.2%; right: 25%; width: 1.3%; animation: girar 2s linear infinite; }
+        .bolaPisca1 { top: 6.2%; right: 28%; width: 1.3%; animation: bola1 2s ease-in-out infinite; }
+        .bolaPisca2 { top: 6.2%; right: 30%; width: 1.3%; animation: bola2 3s ease-in-out infinite; }
+        .bolaPisca3 { top: 6.2%; right: 32%; width: 1.3%; animation: bola3 5s ease-in-out infinite; }
+        .bolaAnda { top: 6.2%; right: 43%; width: 1.3%; animation: bolaA 5s linear infinite; }
+        .cont { top: 40%; right: 19%; width: 31%; }
+
+        /* Animações */
+        @keyframes base { 0% { left: -60%; } 100% { left: 0%; } }
+        @keyframes txtPer { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes girar { 0% { transform: rotate(360deg); } 100% { transform: rotate(0deg); } }
+        @keyframes bola1 { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes bola2 { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes bola3 { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes bolaA { 0% { transform: translateX(0); } 50% { transform: translateX(600%); } 100% { transform: translateX(0); }
+    </style>
+</head>
+<body>
+
+    <div class="CAPA" id="CAPA" onclick="handleClick()">
+        <img class="fundoPneu" src="img/fundoexturizadoPneu.png">
+        <img class="titulo" src="img/titulo.png">
+        <img class="base" src="img/parte inferior.png">
+        <img class="txtPer" src="img/txtPerigoso.png">
+        <img class="blocoArma" src="img/bloco arma.png">
+        <img class="blocoPonte" src="img/bloco ponte.png">
+        <img class="blocoSuperior" src="img/parte superior.png">
+        <img class="carregando" src="img/carregando.png">
+        <img class="bolaPisca1" src="img/bolaPisca.png">
+        <img class="bolaPisca2" src="img/bolaPisca.png">
+        <img class="bolaPisca3" src="img/bolaPisca.png">
+        <img class="bolaAnda" src="img/bolaPisca.png">
+        <img class="cont" src="img/cont.png">
+        <div class="blocoTxt"></div>
+        <img class="txtFim" src="img/txtFim.png">
+    </div>
+
+    <script>
+        function handleClick() {
+            // Adiciona uma leve transformação ao clicar e escurecimento gradual
+            const capa = document.getElementById('CAPA');
+            capa.style.transform = 'translateY(-100%) scale(1.2)';
+            capa.style.opacity = '0'; // Escurece a tela gradualmente
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
