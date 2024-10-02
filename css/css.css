@@ -27,6 +27,7 @@
     color: #B41C37; /* Cor ao passar o mouse sobre o link */
 }
 
+
 body {
     background-color: white;
     color: black;
@@ -65,11 +66,27 @@ body.dark-mode img.light-mode {
 body.dark-mode img.dark-mode {
     display: block;
 }
+header{
+position: fixed;
+top: 0;
+width:100%;
+z-index:2;}
+.carrossel{
+	margin-top:8vh;
+.banner{
+width:100%
+}
+.banner img {
+width:100%;
+}
+
+.subt {
+	text-align:left;
+	font-family: "Bebas Neue", sans-serif;
+}
 
 .toggle-button {
-    position: fixed;
-    top: 1.5%;
-    right: 15%;
+	margin-left:10%;
     padding: 5px 10px;
     background-color: #000;
     color: #fff;
