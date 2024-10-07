@@ -33,6 +33,52 @@
     margin: 0; /* Remover a margem padrão do <p> */
     text-align: center; /* Centralizar o texto */
 }
-	
+.mundo{
+margin:5vh 6%;
+}
+.mundo img{
+	min-width:400px;
+	width:100%;
+}
+#base { 
+height:70px;
+min-height:50px;
+position:relative;
+margin-bottom:3%;
+animation: base 20s linear infinite;
+ }
+@keyframes base { 
+0% { left: -60%; } 
+100% { left: 0%; } 
+}
 
+.sliderMundo{
+margin:5% 5%;
+}
+
+.teste1{
+	text-align:left;
+	width:50%;
+	margin-left:60%;
+	margin-right:10%;
+	margin-bottom:2%;
+	background-color:rgb(40, 40, 40,0.5);
+	padding:1%;
+	
+}
+.teste2{
+	font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5em;
+	text-align:left;
+	margin-left:60%;
+	background-color:rgb(20, 20, 20,0.5);
+	padding:1%;
+}
+.sliderMundo .carousel-control-prev{
+	background-color:#1e1e1e;
+}
+.sliderMundo .carousel-control-next{
+	background-color:#1e1e1e;
+}
+	
 	
