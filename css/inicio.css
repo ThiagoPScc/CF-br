@@ -56,29 +56,43 @@ animation: base 20s linear infinite;
 margin:5% 5%;
 }
 
-.teste1{
-	text-align:left;
-	width:50%;
-	margin-left:60%;
-	margin-right:10%;
-	margin-bottom:2%;
-	background-color:rgb(40, 40, 40,0.5);
-	padding:1%;
-	
+.container {
+  display: flex;
+  width: 100%;
 }
-.teste2{
-	font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5em;
-	text-align:left;
-	margin-left:60%;
-	background-color:rgb(20, 20, 20,0.5);
-	padding:1%;
+
+.text-area {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
-.sliderMundo .carousel-control-prev{
-	background-color:#1e1e1e;
+
+.slider-area {
+  width: 50%;
+  position: relative;
 }
-.sliderMundo .carousel-control-next{
-	background-color:#1e1e1e;
+
+.slider {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
 }
+
+.slide {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 	
 	
