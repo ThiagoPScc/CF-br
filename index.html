@@ -1,231 +1,439 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página do RPG CyberFunk-BR, aqui está o futuro distópico do Brasil.">
-    <meta name="keywords" content="CyberFunk, RPG, Brasil, cyberpunk">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página do RPG CyberFunk-BR, aqui está o futuro distópico do Brasil."
+    />
+    <meta name="keywords" content="CyberFunk, RPG, Brasil, cyberpunk" />
+    <meta name="robots" content="index, follow" />
 
     <title>CyberFunk-BR</title>
 
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img id="logo" src="img/logo.png" alt="Logo">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" id="txtLink" href="#">Home <span class="visually-hidden">(Atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="txtLink" href="#">Criação personagem</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="txtLink" href="#">Habilidades e passivas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="txtLink" href="#">Mundo e regras</a>
-                    </li>
-                </ul>
-				  <button id="toggle-button" onclick="toggleMode()">🌑</button>
-            </div>
-        </nav>
-        
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img id="logo" src="img/logo.png" alt="Logo" />
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" id="txtLink" href="#"
+                >Home <span class="visually-hidden">(Atual)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="txtLink" href="#">Criação personagem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="txtLink" href="#"
+                >Habilidades e passivas</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="txtLink" href="#">Mundo e regras</a>
+            </li>
+          </ul>
+          <button id="toggle-button" onclick="toggleMode()">🌑</button>
+        </div>
+      </nav>
     </header>
-	<div class="carrossel">
-	  <div id="carouselExample" class="carousel slide">
-		  <div class="carousel-inner">
-			<div class="carousel-item active">
-			  <img src="img/carrossel1.png" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-			  <img src="img/carrossel2.png" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-			  <img src="img/carrossel3.png" class="d-block w-100" alt="...">
-			</div>
-		  </div>
-		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		  </button>
-		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		  </button>
-		</div>
-	</div>
-    <div class="corpo">
-		<div class="container text-center">
-		  <div class="row">
-			<div class="col-sm-8">
-			<h2 class="subt">titulo</h2>
-			<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-			<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-			<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-			<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-			</div>
-			<div class="col-sm-4">
-			<h2 class="subt">titulo</h2>
-				<div class="accordion accordion-flush" id="accordionFlushExample">
-				  <div class="accordion-item">
-					<h2 class="accordion-header">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-						Accordion Item #1
-					  </button>
-					</h2>
-					<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-					  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-						Accordion Item #2
-					  </button>
-					</h2>
-					<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-					  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-						Accordion Item #2
-					  </button>
-					</h2>
-					<div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-					  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-					</div>
-				  </div>
-				</div>
-			</div>
-		  </div>
-		</div>
+    <div class="carrossel">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/carrossel1.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="img/carrossel2.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="img/carrossel3.png" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-	<div class="banner">
-		<img src="img/banner1.png"  class="dark-mode">
-		<img src="img/banner2.png"  class="light-mode">
-	</div>
-	
-	<div class="mundo">
-		<div class="row">
-			<div class="col">
-			
-			<img src="img/imgMundoLateral.png">
-				
-			</div>
-			<div class="col">
-				<h2 class="subt">titulo</h2>
-				<p class="subt2"> Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-				<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-				<p class="subt2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-				<p class="subt2"> Lorem ipsum dolor sit amet,aaaaaaa consectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim. </p>
-			
-			</div>
-		</div>
-	
-	
-	</div>
-	<img id="base"  class="dark-mode" src="img/parte inferior.png">
-	<img id="base"  class="light-mode" src="img/parte inferior2.png">
-	
-		<div class="sliderMundo">
-		
-		
-		<div class="container text-center">
-			  <div class="row">
-				<div class="col">
-					<div>
-						<p id="txtSlider">Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur adipiscing elit.ddddddddddddddddddddddddddddddddddddddvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim.</p>
-					</div>
-				</div>
-				<div class="col">
-				<div id="carouselExampleIndicators" class="carousel slide">
-					  <div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-					  </div>
-					  <div class="carousel-inner">
-						<div class="carousel-item active">
-						  <img src="img/carrossel1.png" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-						  <img src="img/carrossel2.png" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-						  <img src="img/carrossel3.png" class="d-block w-100" alt="...">
-						</div>
-					  </div>
-					  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="subTxt()">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					  </button>
-					  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="addTxt()">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					  </button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-				
-	</div>
+    <div class="corpo">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 class="subt">titulo</h2>
+            <p class="subt2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+              pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec
+              suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+              lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+              auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+              amet lorem lacinia dignissim.
+            </p>
+            <p class="subt2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+              pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec
+              suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+              lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+              auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+              amet lorem lacinia dignissim.
+            </p>
+            <p class="subt2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+              pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec
+              suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+              lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+              auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+              amet lorem lacinia dignissim.
+            </p>
+            <p class="subt2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+              pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec
+              suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+              lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+              auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+              amet lorem lacinia dignissim.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h2 class="subt">titulo</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the first item's accordion body.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner">
+      <img src="img/banner1.png" class="dark-mode" />
+      <img src="img/banner2.png" class="light-mode" />
+    </div>
+
+    <div class="mundo">
+      <div class="row">
+        <div class="col">
+          <img src="img/imgMundoLateral.png" />
+        </div>
+        <div class="col">
+          <h2 class="subt">titulo</h2>
+          <p class="subt2">
+            Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur adipiscing
+            elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur.
+            Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+            lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+            auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+            amet lorem lacinia dignissim.
+          </p>
+          <p class="subt2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+            pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit
+            sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras
+            ac risus libero. Curabitur rutrum est non justo auctor, eget
+            efficitur felis mollis. Quisque ullamcorper neque sit amet lorem
+            lacinia dignissim.
+          </p>
+          <p class="subt2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
+            pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit
+            sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras
+            ac risus libero. Curabitur rutrum est non justo auctor, eget
+            efficitur felis mollis. Quisque ullamcorper neque sit amet lorem
+            lacinia dignissim.
+          </p>
+          <p class="subt2">
+            Lorem ipsum dolor sit amet,aaaaaaa consectetur adipiscing elit. Nam
+            non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec
+            suscipit sagittis vestibulum. Morbi viverra mollis enim quis
+            lobortis. Cras ac risus libero. Curabitur rutrum est non justo
+            auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit
+            amet lorem lacinia dignissim.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img id="base" class="dark-mode" src="img/parte inferior.png" />
+    <img id="base" class="light-mode" src="img/parte inferior2.png" />
+
+    <div class="sliderMundo">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div>
+              <p id="txtSlider">
+                3 Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur
+                adipiscing elit.ddddddddddddddddddddddddddddddddddddddvinar
+                metus. Curabitur rhoncus bibendum efficitur. Donec suscipit
+                sagittis vestibulum. Morbi viverra mollis enim quis lobortis.
+                Cras ac risus libero. Curabitur rutrum est non justo auctor,
+                eget efficitur felis mollis. Quisque ullamcorper neque sit amet
+                lorem lacinia dignissim.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/carrossel1.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/carrossel2.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/carrossel3.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+                onclick="subTxt()"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+                onclick="addTxt()"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
-        function toggleMode() {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-        }
+      function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+        const isDarkMode = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDarkMode);
+      }
 
-        window.onload = function() {
-            const darkMode = localStorage.getItem('darkMode') === 'true';
-            if (darkMode) {
-                document.body.classList.add('dark-mode');
-            }
+      window.onload = function () {
+        const darkMode = localStorage.getItem("darkMode") === "true";
+        if (darkMode) {
+          document.body.classList.add("dark-mode");
         }
-		let index = 0;
-		const textos = [
-            "Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim.",
-            "Lorem ipsum dolor sit amet, aaaaaaaaaaaaaaconsectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget aaaaaaaaaaaaaaaaaaaaaaaaaaer neque sit amet lorem lacinia dignissim.",
-			"",
-        ];
-		let primeiroTXT = document.getElementById("txtSlider");
-		textos[2] = primeiroTXT.textContent;
-		console.log("00110001 00110101 00111001 00111000 00110110");
-		console.log("Você não deveria estar aqui");
-		
-		function subTxt(){
-			const paragrafo = document.getElementById("txtSlider");
-            paragrafo.textContent = textos[index];
-            index = (index + 1) % textos.length; // Cicla pelo array de textos
-		}
-		function addTxt(){
-			const paragrafo = document.getElementById("txtSlider");
-            paragrafo.textContent = textos[index];
-            index = (index - 1) % textos.length; // Cicla pelo array de textos
-		}
-		
-		
+      };
+      let index = 0;
+      const textos = [
+        "1   oncus bibendum efficitur. Donec suscipit sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget efficitur felis mollis. Quisque ullamcorper neque sit amet lorem lacinia dignissim.",
+        "2   aaaaaaaaaaaconsectetur adipiscing elit. Nam non pulvinar metus. Curabitur rhoncus aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa sagittis vestibulum. Morbi viverra mollis enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor, eget aaaaaaaaaaaaaaaaaaaaaaaaaaer neque sit amet lorem lacinia dignissim.",
+        "",
+      ];
 
+      let isCooldown = false;
+      let primeiroTXT = document.getElementById("txtSlider");
+      textos[2] = primeiroTXT.textContent;
+      console.log("00110001 00110101 00111001 00111000 00110110");
+      console.log("Você não deveria estar aqui");
+
+      function updateText() {
+        const paragrafo = document.getElementById("txtSlider");
+        paragrafo.textContent = textos[index];
+      }
+
+      function addTxt() {
+        if (isCooldown) return; // Não faz nada se ainda estiver no cooldown
+        isCooldown = true; // Ativa o cooldown
+
+        index = (index + 1) % textos.length; // Cicla pelo array de textos
+        updateText(); // Atualiza o texto na tela
+        console.log(index);
+
+        setTimeout(() => {
+          isCooldown = false; // Libera o cooldown após 0.3 segundos
+        }, 500);
+      }
+
+      function subTxt() {
+        if (isCooldown) return; // Não faz nada se ainda estiver no cooldown
+        isCooldown = true; // Ativa o cooldown
+
+        index = (index - 1 + textos.length) % textos.length; // Cicla para o índice anterior
+        updateText(); // Atualiza o texto na tela
+        console.log(index);
+
+        setTimeout(() => {
+          isCooldown = false; // Libera o cooldown após 0.3 segundos
+        }, 500);
+      }
+
+      // Inicializa o texto
+      document.addEventListener("DOMContentLoaded", () => {
+        updateText(); // Mostra o primeiro texto
+      });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
