@@ -48,7 +48,7 @@ margin-bottom:3%;
 animation: base 20s linear infinite;
  }
 @keyframes base { 
-0% { left: -60%; } 
+0% { left: -30%; } 
 100% { left: 0%; } 
 }
 
@@ -93,6 +93,36 @@ margin:5% 5%;
 .next {
   right: 10px;
 }
+.bannerTela {
+  width: 100%;
+  height: 50vh;
+}
+.bannerTela img{
+  width: 100%;
+  height: 50vh;
+}
+.mundoBl {
+  background-image: url("../img/FundoPalco.png"); /* Caminho relativo ao arquivo CSS */
+  width: 100%;
+  background-size: cover;
+  background-position: center;}
 
-	
-	
+  .txtMundo{
+  
+    width: 40%;
+    height:60%;
+    margin: 5% 5% 5% 50%;
+    padding: 2%;
+  }
+  .txtMundoDentro{
+    background-color:  white;
+    padding: 2%;
+  }
+  body.dark-mode .txtMundoDentro{
+    background-color: #1e1e1e;
+  }
+.txtSlider1{
+  width: 100%;
+  min-width: 400px;
+  text-align: justify;
+}
