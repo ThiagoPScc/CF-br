@@ -1,4 +1,3 @@
-
 .gifFundo {
     position: relative; /* Tornar o contêiner de fundo relativo para o posicionamento absoluto interno */
     width: 100%;
@@ -26,109 +25,134 @@
     justify-content: center;
     padding: 1em; /* Adicionar um pouco de espaço interno */
     box-sizing: border-box; /* Incluir padding e border no cálculo de largura e altura */
-
 }
 
 .txtV {
     margin: 0; /* Remover a margem padrão do <p> */
     text-align: center; /* Centralizar o texto */
 }
-.mundo{
-margin:5vh 6%;
-}
-.mundo img{
-	min-width:400px;
-	width:100%;
-}
-#base { 
-height:70px;
-min-height:50px;
-position:relative;
-margin-bottom:3%;
-animation: base 20s linear infinite;
- }
-@keyframes base { 
-0% { left: -30%; } 
-100% { left: 0%; } 
+
+.mundo {
+    margin: 5vh 6%;
 }
 
-.sliderMundo{
-margin:5% 5%;
+.mundo img {
+    min-width: 400px;
+    width: 100%;
+}
+
+#base {
+    height: 70px;
+    min-height: 50px;
+    position: relative;
+    margin-bottom: 3%;
+    overflow: hidden;
+    animation: base 20s linear infinite;
+}
+
+@keyframes base {
+    0% { left: -30%; } 
+    100% { left: 0%; }
+}
+
+.sliderMundo {
+    margin: 5% 5%;
 }
 
 .container {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .text-area {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
 .slider-area {
-  width: 50%;
-  position: relative;
+    width: 50%;
+    position: relative;
 }
 
 .slider {
-  width: 100%;
-  display: flex;
-  overflow: hidden;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 
 .slide {
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .prev {
-  left: 10px;
+    left: 10px;
 }
 
 .next {
-  right: 10px;
+    right: 10px;
 }
-.bannerTela {
-  width: 100%;
-  height: 50vh;
-}
-.bannerTela img{
-  width: 100%;
-  height: 50vh;
-}
-.mundoBl {
-  background-image: url("../img/FundoPalco.png"); /* Caminho relativo ao arquivo CSS */
-  width: 100%;
-  background-size: cover;
-  background-position: center;}
 
-  .txtMundo{
+.bannerTela {
+    width: 100%;
+    height: 50vh;
+}
+
+.bannerTela img {
+    width: 100%;
+    height: 50vh;
+}
+
+.mundoBl {
+    background-image: url("../img/FundoPalco.png"); /* Caminho relativo ao arquivo CSS */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.txtMundo {
     width: 45%;
-    height:60%;
+    height: 60%;
     margin: 5% 5% 5% 50%;
     padding: 2%;
-  }
-  .txtMundoDentro{
-    background-color:  white;
-    padding: 4%;
-  }
-  body.dark-mode .txtMundoDentro{
-    background-color: #1e1e1e;
-  }
-.txtSlider1{
-  width: 100%;
-  text-align: justify;
 }
-#txtSlider{
-	min-width:400px;
+
+.txtMundoDentro {
+    background-color: white;
+    padding: 4%;
+}
+
+body.dark-mode .txtMundoDentro {
+    background-color: #1e1e1e;
+}
+
+.txtSlider1 p {
+    width: 100%;
+	font-size:1.2em;
+    text-align: justify;
 }
 .carousel-item img{
-	min-width:400px;
+	height:50%;
+}
+
+#txtSlider {
+    min-width: 300px;
+}
+
+.baseS {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    min-width: 300px;
+}
+.lojasCont{
+	overflow:hidden;
 }
 .itemLoja img {
     margin-left: -60%;
@@ -142,12 +166,85 @@ margin:5% 5%;
 
 /* Estilo para dispositivos móveis */
 @media (max-width: 800px) {
+	.txtMundo {
+    width: 80%;
+    height: 60%;
+    margin: 5% 5% 5% 10%;
+    padding: 2%;
+}
     .itemLoja img {
-        margin-left: -138%; /* Deslocamento em telas pequenas */
+        margin-left: -128%; /* Deslocamento em telas pequenas */
         width: 900px; /* Tamanho fixo para manter a legibilidade */
     }
 
     .itemLoja img:hover {
-        margin-left: -85%; /* Efeito hover em telas pequenas */
+        margin-left: -75%; /* Efeito hover em telas pequenas */
     }
+}
+
+@media (max-width: 400px) {
+	.txtMundo {
+    width: 80%;
+    height: 60%;
+    margin: 5% 5% 5% 10%;
+    padding: 2%;
+}
+    .itemLoja img {
+        margin-left: -188%; /* Deslocamento em telas pequenas */
+        width: 900px; /* Tamanho fixo para manter a legibilidade */
+    }
+
+    .itemLoja img:hover {
+        margin-left: -95%; /* Efeito hover em telas pequenas */
+    }
+}
+
+.contFam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.itemFam {
+    position: relative;
+    width: 18%; /* Ajuste a largura para garantir que cinco itens caibam em uma linha */
+    min-width: 200px;
+    margin: 10px; /* Adiciona espaço entre os itens */
+    text-align: center; /* Alinha o conteúdo centralmente */
+}
+
+.itemFam img {
+    width: 80%; /* Ajuste a largura da imagem */
+    transition: transform 0.5s ease;
+}
+
+.hover-content {
+    color: white;
+    position: absolute;
+    top: 0; /* Ajuste conforme necessário */
+    left: 0; /* Ajuste conforme necessário */
+    width: 100%; /* Ou ajuste conforme necessário */
+    height: 100%; /* Ou ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease; /* Transição suave para aparecer */
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+.image-container:hover .hover-content {
+    opacity: 1; /* Fica visível ao passar o mouse */
+}
+
+.cont1Hov {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cont2Hov p {
+    text-align: left;
 }
