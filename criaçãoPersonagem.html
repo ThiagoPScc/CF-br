@@ -1,0 +1,279 @@
+!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página do RPG CyberFunk-BR, aqui está o futuro distópico do Brasil."
+    />
+    <meta name="keywords" content="CyberFunk, RPG, Brasil, cyberpunk" />
+    <meta name="robots" content="index, follow" />
+
+    <title>CyberFunk-BR</title>
+
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="css/cssPerso.css" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img id="logo" src="img/logo.png" alt="Logo" />
+      <a class="navbar-brand" href="#"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" id="txtLink" href="#"
+              >Home <span class="visually-hidden">(Atual)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="txtLink" href="#">Criação personagem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="txtLink" href="#"
+              >Habilidades e passivas</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="txtLink" href="#">Mundo e regras</a>
+          </li>
+        </ul>
+        <button id="toggle-button" onclick="toggleMode()">🌑</button>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <section id="bannerPerso">
+                <div class="imgBannerPerso">
+                    <img src="img/carrossel1.png">
+                </div>
+                <div class="txtBannerPerso">
+                    <h2>Titulo</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                    Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                    lectus nisl maximus risus, 
+                    condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+                    </p>
+                    <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                        Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                        lectus nisl maximus risus, 
+                        condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                        Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                        lectus nisl maximus risus, 
+                        condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+                    </p>
+                </div>
+    </section>
+    <div  class="baseS">
+		<img id="base" class="dark-mode" src="img/parte inferior.png">
+		<img id="base" class="light-mode" src="img/parte inferior2.png">
+	</div>  
+    <section id="persoSlider">
+        <div class="colTxt">
+            1 of 3
+        </div>
+        <div class="sliderPerso">
+            <button type="button" class="btn btn-danger">Danger</button>
+            <img src="img/Perso1place.jpg">
+            <button type="button" class="btn btn-danger">Danger</button>
+        </div>
+        <div class="colTxt">
+            1 of 3
+        </div>
+    </section>
+
+
+    <div  class="baseS">
+		<img id="base" class="dark-mode" src="img/parte inferior.png">
+		<img id="base" class="light-mode" src="img/parte inferior2.png">
+	</div> 
+
+
+
+    <section id="prof">
+        <div class="txtProf">
+            <h2>Titulo</h2>
+            <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                    Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                    lectus nisl maximus risus, 
+                    condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+            </p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                    Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                    lectus nisl maximus risus, 
+                    condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+            </p>
+        </div>     
+
+
+
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <img src="img/iconPerso.PNG">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+        </div>
+        <div class="itemProf">
+            <div class="image-container">
+                <img src="img/iconPerso.PNG">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <div class="hover-content">
+                    <div class="cont1Hov">
+                        <p>Texto que aparece ao passar o mouse</p>
+                    </div>
+                    <div class="cont2Hov">
+                        <h3>titulo</h3>
+                        <p>enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor,</p>
+                        <hr>
+                        <button type="button" class="btn btn-success">Success</button>
+                    </div>
+                </div>	
+            </div> 
+        </div>
+        <div class="itemProf">
+            <div class="image-container">
+                <img src="img/iconPerso.PNG">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <div class="hover-content">
+                    <div class="cont1Hov">
+                        <p>Texto que aparece ao passar o mouse</p>
+                    </div>
+                    <div class="cont2Hov">
+                        <h3>titulo</h3>
+                        <p>enim quis lobortis. Cras ac risus libero. Curabitur rutrum est non justo auctor,</p>
+                        <hr>
+                    </div>
+                </div>	
+            </div> 
+        </div>
+    </section>
+    <div  class="baseS">
+		<img id="base" class="dark-mode" src="img/parte inferior.png">
+		<img id="base" class="light-mode" src="img/parte inferior2.png">
+	</div> 
+    <section id="passado">
+
+        <div class="txtProf">
+            <h2>Titulo</h2>
+            <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                    Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                    lectus nisl maximus risus, 
+                    condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+            </p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.
+                    Curabitur leo ligula, finibus vel vestibulum nec, cursus eu lectus. Curabitur dapibus in enim vel consectetur. Nulla molestie, felis sed feugiat laoreet, 
+                    lectus nisl maximus risus, 
+                    condimentum semper velit sapien vestibulum elit. Nunc fermentum at tortor ut euismod. In hac habitasse platea dictumst. Sed non nisl elit.
+            </p>
+        </div>    
+
+        <div class="itemPass">
+            <img src="img/iconPerso.PNG">
+            <div class="txtPassItem">
+                <h3>titulo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+        <div class="itemPass">
+            <img src="img/iconPerso.PNG">
+            <div class="txtPassItem">
+                <h3>titulo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+        <div class="itemPass">
+            <img src="img/iconPerso.PNG">
+            <div class="txtPassItem">
+                <h3>titulo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a elit a dui luctus interdum. Nulla porta dictum libero ac porttitor.</p>
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+    </section>
+
+  </body>
+
+
+
+
+
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      const isDarkMode = document.body.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", isDarkMode);
+    }
+
+    window.onload = function () {
+      const darkMode = localStorage.getItem("darkMode") === "true";
+      if (darkMode) {
+        document.body.classList.add("dark-mode");
+      }
+    };
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+#bannerPerso{
+    margin: 1% 0%;
+}
+.txtBannerPerso{
+   
+    margin: auto;
+    padding: 2% 5% ;
+
+}
+.imgBannerPerso img{
+width: 100%;
+height: 40%;
+min-width: 400px;
+}
+#base {
+    height: 70px;
+    min-height: 50px;
+    position: relative;
+    margin-bottom: 3%;
+    overflow: hidden;
+    animation: base 20s linear infinite;
+}
+.baseS {
+    position: relative;
+    overflow: hidden;
+}
+@keyframes base {
+    0% { left: -30%; } 
+    100% { left: 0%; }
+}
+.sliderPerso{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:10px;
+}
+.sliderPerso img{
+   width: 67%;
+   min-width: 300px;
+}
+#persoSlider{
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.colTxt{
+    background-color: red;
+    width:30%;
+    min-width: 300px;
+}
+
+#prof{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+
+.itemProf {
+    width: 20%;
+    height: auto; /* Use auto para ajustar conforme o conteúdo */
+    background-color: red;
+    min-width: 200px;
+    margin-bottom: 4%;
+    position: relative; /* Necessário para a hover-content funcionar corretamente */
+    overflow: hidden; /* Garantir que o conteúdo interno não vaze */
+}
+
+.itemProf img {
+    width: 100%;
+}
+
+.hover-content {
+    color: white;
+    position: absolute;
+    top: 0; /* Ajuste conforme necessário */
+    left: 0; /* Ajuste conforme necessário */
+    width: 100%;
+    height: 110%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease; /* Transição suave para aparecer */
+    background-color: rgba(20, 20, 20, 0.9);
+    overflow-y: auto;
+}
+
+.txtProf{
+    padding: 0 2% 3% 2%;
+}
+
+.image-container {
+    position: relative; /* Para que hover-content seja posicionado corretamente */
+}
+
+.image-container:hover .hover-content {
+    opacity: 1; /* Fica visível ao passar o mouse */
+}
+#passado{
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0 3%;
+    justify-content: space-around;
+}
+.itemPass{
+    margin-bottom: 5%;
+    display: flex;
+    width:20%;
+    min-width: 330px;
+    height: 50%;
+    flex-direction: column;
+    background-color: red;
+}
+.itemPass img{
+   width: 100%;
+}
+.txtPassItem{
+   padding: 3% 6%;
+}
+.itemPass .btn.btn-success{
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .colTxt {
+      display: block;
+      width: 100%;
+    }
+  
+  }
