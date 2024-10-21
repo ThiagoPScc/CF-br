@@ -40,7 +40,20 @@
     min-width: 400px;
     width: 100%;
 }
+.musicaMenu {
+    z-index: 2;
+    margin-left: 96%; /* Começa fora da tela */
+    top: 50%;
+    position: fixed;
+    width: 25%;
+    height: 15%;
+    transition: margin-left 0.5s ease;
+    background-color: red;
+}
 
+.musicaMenu:hover {
+    margin-left: 80%; /* Desliza para dentro da tela ao passar o mouse */
+}
 #base {
     height: 70px;
     min-height: 50px;
@@ -166,6 +179,19 @@ body.dark-mode .txtMundoDentro {
 
 /* Estilo para dispositivos móveis */
 @media (max-width: 800px) {
+	.musicaMenu {
+    z-index: 2;
+    margin-left: 95%; /* Começa fora da tela */
+    top: 50%;
+    position: fixed;
+    width: 45%;
+    height: 15%;
+    transition: margin-left 0.5s ease;
+    background-color: red;
+}
+.musicaMenu:hover {
+    margin-left: 60%; /* Desliza para dentro da tela ao passar o mouse */
+}
 	.txtMundo {
     width: 80%;
     height: 60%;
@@ -183,6 +209,18 @@ body.dark-mode .txtMundoDentro {
 }
 
 @media (max-width: 400px) {
+	.musicaMenu {
+    z-index: 2;
+    margin-left: 95%; /* Começa fora da tela */
+    top: 50%;
+    position: fixed;
+    width: 65%;
+    height: 15%;
+    transition: margin-left 0.5s ease;
+    background-color: red;}
+	.musicaMenu:hover {
+    margin-left: 45%; /* Desliza para dentro da tela ao passar o mouse */
+}
 	.txtMundo {
     width: 80%;
     height: 60%;
@@ -233,8 +271,41 @@ body.dark-mode .txtMundoDentro {
     opacity: 0; /* Começa invisível */
     transition: opacity 0.5s ease; /* Transição suave para aparecer */
     background-color: rgba(20, 20, 20, 0.9);
+	overflow-y: auto;
 }
-
+.contFamDesc{
+	width:90%;
+	Margin:auto;
+	display:flex;
+}
+.contFamDesc1{
+	min-width:300px;
+	display:flex;
+	flex-direction:column;
+}
+.contFamDesc2{
+	text-align:justify;
+	font-size:1.2em;
+	min-width:300px;
+	display:flex;
+	flex-direction:column;
+}
+.contFamDesc2 h{
+	text-align:left;
+}
+.contFamDesc1-1{
+	display:flex;
+	gap:10%;
+	align-items: center;
+	margin:auto;
+}
+.contFamDesc1-2{
+	margin-top:5%;
+}
+.contFamDesc1-2 img{
+	width:100%;
+	
+}
 .image-container:hover .hover-content {
     opacity: 1; /* Fica visível ao passar o mouse */
 }
