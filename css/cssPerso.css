@@ -52,12 +52,20 @@ height: 40%;
 .txtSliderClass table{
 color:white;
 }
+.imgBtnCla{
+	display:flex;
+	flex-direction:column;
+	width:40%;
+}
 
+.imgBtnCla img{
+	width:100%;
+}
 .colTxt{
 	text-align:justify;
 	padding:2% 3%;
     background-color: red;
-    width:25%;
+    width:40%;
     min-width: 250px;
 }
 
@@ -160,23 +168,36 @@ color:white;
 .conteudoFamTxt{
 	padding:3%;
 }
-.btnFam Hover{
+.btnFam:Hover{
 	font-size:1.3em;
 	color:white;
+}
+.txtBtnFam{
+	margin:0 auto;
+	text-align:center;
+	width:50%;
+	box-shadow:rgb(20,20,20,0.3) 0px 0px 20px 20px;
+	background-color:rgb(20,20,20,0.3);
 }
 .btnFam{
 	width:100%;
 	height:100%;
-	background-image:url("../img/iconPerso.png");
+	background-color:red;
+	/*background-image:url("../img/iconPerso.png");*/
 	background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-border:none;
+	background-repeat: no-repeat;
+	background-position: center;
+	border:none;
 }
 .conteudoFam img{
 	width:100%;
 }
 @media (max-width: 1000px) {
+	
+	.txtBtnFam{
+	
+	box-shadow:rgb(20,20,20,0.3) 0px 0px 10px 10px;
+	}
 	#persoSlider{
 		  flex-wrap: wrap;
 	}
@@ -184,10 +205,9 @@ border:none;
       display: block;
       width: 100%;
     }
-	.sliderPerso img{
-   width: 30%;
-   min-width: 300px;
-	}
+	.imgBtnCla img{
+	width:100%;
+}
   
   }
   
