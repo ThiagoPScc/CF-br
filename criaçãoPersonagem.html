@@ -632,6 +632,8 @@
 	let hum = 0;
 	let val = 0;
 	let din = 0;
+	let familia = "";
+	let inventario = [];
 	
 	//variaveis das escolhas
 	let classe = 0;
@@ -902,6 +904,8 @@ function validar(){
 	}
 }
 	function resetarDados(){
+	inventario = [];
+	familia = "";
 	vida = 0;
 	des = 0;
 	forc = 0;
@@ -913,8 +917,8 @@ function validar(){
 	din = 0;
 	}
 	
-	
-	function escolhaClasse(classe){
+//função para calcular a escolha da classe
+function escolhaClasse(classe){
 		switch (classe) {
 		  case 1:
 				vida = 50;
@@ -982,14 +986,238 @@ function validar(){
 				val = 0;
 			break;	
 		}
-		console.log(vida,des,forc,inte,ram,car,val);
-		
+		console.log(vida,des,forc,inte,ram,car,val);	
 	}
+//Função para calcular a escolha da profissão
+function escolhaProfissao(prof){
+	switch (prof) {
+		  case 1:
+				des += 1;
+				forc += 5;
+				inte += 0;
+				ram += 0;
+				car += 3;	
+			break;
+			 case 2:
+				des += 3;
+				forc += 0;
+				inte += 5;
+				ram += 1;
+				car += 0;	
+			break;
+			 case 3:
+				des += 3;
+				forc += 0;
+				inte += 0;
+				ram += 1;
+				car += 5;	
+			break;
+			 case 4:
+				des += 1;
+				forc += 3;
+				inte += 5;
+				ram += 0;
+				car += 0;	
+			break;
+			 case 5:
+				des += 0;
+				forc += 0;
+				inte += 3;
+				ram += 1;
+				car += 5;	
+			break;
+			 case 6:
+				des += 3;
+				forc += 5;
+				inte += 0;
+				ram += 1;
+				car += 0;	
+			break;
+			 case 7:
+				des += 1;
+				forc += 5;
+				inte += 0;
+				ram += 3;
+				car += 0;	
+			break;
+			case 8:
+				des += 1;
+				forc += 0;
+				inte += 5;
+				ram += 3;
+				car += 0;	
+			break;
+			case 9:
+				des += 5;
+				forc += 0;
+				inte += 0;
+				ram += 1;
+				car += 3;	
+			break;
+			case 10:
+				des += 5;
+				forc += 3;
+				inte += 0;
+				ram += 0;
+				car += 1;	
+			break;
+			case 11:
+				des += 0;
+				forc += 3;
+				inte += 5;
+				ram += 1;
+				car += 0;	
+			break;
+			case 12:
+				desempregado();
+				console.log("teste");
+			break;
+			case 13:
+				des += 5;
+				forc += 1;
+				inte += 3;
+				ram += 0;
+				car += 0;	
+			break;
+			case 14:
+				des += 0;
+				forc += 0;
+				inte += 1;
+				ram += 3;
+				car += 5;	
+			break;
+			case 15:
+				des += 3;
+				forc += 0;
+				inte += 1;
+				ram += 0;
+				car += 5;	
+			break;
+			case 16:
+				des += 0;
+				forc += 0;
+				inte += 5;
+				ram += 1;
+				car += 3;	
+			break;
+	}
+		console.log(vida,des,forc,inte,ram,car,val);	
+}
+//caso a prof seja desempregado:
+let valorCerto = false;
+let escolhaAtrt = 0;
+
+function desempregado(){
+while (valorCerto == false){
+	let escolhaAtrt = prompt('escolha seu atributo, digite o numero da sua escolha: \n 1.Força \n 2.Destreza \n 3.Inteligência \n 4.Carisma \n 5.Ram');
+	if (escolhaAtrt >= 1 && escolhaAtrt <= 5){
+		valorCerto = true;
+	}
+	else{
+	alert("valor invalido");
+	}
+}
+	switch (escolhaAtrt){
+		case 1 :
+			forc += 2;
+		break;
+		case 2 :
+			des += 2;
+		break;
+		case 3 :
+			inte += 2;
+		break;
+		case 4 :
+			car += 2;
+		break;
+		case 5 :
+			ram += 2;
+		break;
+	}
+};
+
+//função para calcular a escolha do passado :
+function escolhaPassado(passado){
+		switch (passado) {
+		  case 1:
+				adicionarItem("Granada incendiária");
+				adicionarItem("Granada incendiária");
+				adicionarItem("Barricada de metal");
+				adicionarItem("Rastreador");
+				adicionarItem("Maço de cigarro");
+				adicionarItem("Corrente");
+				adicionarItem("Caixa de ferramentas");
+				din += 1000;
+				
+			break;
+		  case 2:
+				adicionarItem("Equipamento de trilha de rede barato");
+				adicionarItem("Granada incendiária");
+				adicionarItem("Barricada de metal");
+				adicionarItem("Rastreador");
+				adicionarItem("Maço de cigarro");
+				din += 2000;
+			break;
+		  case 3:
+				adicionarItem("Granada incendiária");
+				adicionarItem("Granada incendiária");
+				adicionarItem("Barricada de metal");
+				din += 5000;
+			break;
+		}
+}
+//função para adicionar itens no inventário
+let item = "";
+let j = 0;
+function adicionarItem(nomeItem){
+	let item = inventario.find(j => j.nome === nomeItem);
+	
+	if (item){
+		item.quantidade +=1;
+	}
+	else{
+		inventario.push({nome:nomeItem,quantidade:1});
+	}
+
+}
+// função para calculo familia, não vai ter muita coisa afinal a familia só da a passiva e não tem como eu saber quantos jogadores vão ser da mesma familia
+
+function escolhaFamilia(fam){
+	switch (fam){
+		case 1:
+			familia = "Vazio";
+		break;
+		case 2:
+			familia = "Divinos";
+		break;
+		case 3:
+			familia = "Antigos";
+		break;
+		case 4:
+			familia = "Afogados";
+		break;
+		case 5:
+			familia = "Adubados";
+		break;
+		case 6:
+			familia = "Matilha";
+		break;
+		}
+	console.log(familia);
+
+}
+
+
+// função para criar os dados para a ficha:
 function criarFicha(){
 	resetarDados();
 	validar();
 	console.log(valido);
 	escolhaClasse(classe);
+	escolhaProfissao(prof);
+	escolhaPassado(passado);
+	console.log(inventario);
+	escolhaFamilia(fam);
 	
 	
 	
