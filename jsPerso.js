@@ -23,6 +23,8 @@
 	let din = 0;
 	let familia = "";
 	let inventario = [];
+	let nome = "";
+	let idade = 0;
 	
 	//variaveis das escolhas
 	let classe = 0;
@@ -50,7 +52,7 @@
 	function escolhaFam(escFam){
 		fam = escFam;
 	};
-	
+
 	function mostraDados(){
 	console.log(classe,prof,passado,fam);
 	criarFicha();
@@ -259,11 +261,18 @@
 		
 // código para criação das fichas
 function validar(){
+	let vI = false;
+	let vN = false;
 	let vC = false;
 	let vPr = false;
 	let vPa = false;
 	let vF = false;
-	
+	if (nome != ""){
+		vN = true;
+	}
+	if (idade >= 10 && idade <= 150){
+		vI = true;
+	}
 	if (classe >= 1 && classe <=7) {
 		vC = true;
 	}
@@ -277,7 +286,7 @@ function validar(){
 		vF = true;
 	}
 	
-	if(vC == true && vPr == true && vPa  == true && vF == true){
+	if(vC == true && vPr == true && vPa  == true && vF == true && vN == true && vI == true){
 	valido = true;
 	
 	}
@@ -287,10 +296,19 @@ function validar(){
         "Classe foi escolhida: " + vC + "\n" +
         "Profissão foi escolhida: " + vPr + "\n" +
         "Passado foi escolhido: " + vPa + "\n" +
+		"Nome foi escolhidO: " + vN + "\n" +
+        "Idade foi escolhida: " + vI + "\n" +
         "Família foi escolhida: " + vF);
 	console.log(vC,vPr,vPa,vF);
 
 	}
+
+}
+
+
+function pegarNome() {
+	nome = document.getElementById("nomePerso");
+	idade = document.getElementById("idadePerso");
 }
 	function resetarDados(){
 	inventario = [];
@@ -600,6 +618,8 @@ function escolhaFamilia(fam){
 // função para criar os dados para a ficha:
 function criarFicha(){
 	resetarDados();
+	pegarNome();
+	console.log(idade);
 	validar();
 	console.log(valido);
 	escolhaClasse(classe);

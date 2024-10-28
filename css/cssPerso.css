@@ -192,6 +192,28 @@ color:white;
 .conteudoFam img{
 	width:100%;
 }
+#form{
+    background-image: url("../img/FundoPalco.png");
+    padding: 5%;
+}
+#CriacaoClasse{
+    background-color:red;
+    box-shadow:rgb(20,20,20,0.8) 0px 0px 10px 10px;
+    display: flex;
+    gap: 4%;
+    padding: 10px;
+    flex-direction: column;
+    margin: 5% 20%;
+}
+#nomePerso{
+    margin-bottom:5% ;
+}
+#btnFicha{
+    width: 100%;
+    border-radius: 0;
+}
+
+
 @media (max-width: 1000px) {
 	
 	.txtBtnFam{
