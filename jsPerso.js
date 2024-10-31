@@ -307,10 +307,11 @@ function validar(){
 
 
 function pegarNome() {
-	nome = document.getElementById("nomePerso");
-	idade = document.getElementById("idadePerso");
+	nome = document.getElementById("nomePerso").value;
+	idade = document.getElementById("idadePerso").value;
 }
 	function resetarDados(){
+	nome ="";
 	inventario = [];
 	familia = "";
 	vida = 0;
@@ -620,6 +621,7 @@ function criarFicha(){
 	resetarDados();
 	pegarNome();
 	console.log(idade);
+	console.log(nome);
 	validar();
 	console.log(valido);
 	escolhaClasse(classe);
@@ -627,7 +629,43 @@ function criarFicha(){
 	escolhaPassado(passado);
 	console.log(inventario);
 	escolhaFamilia(fam);
-	
+	gerarPDF();
 	
 	
 	}
+	
+	//código para PDF
+	
+	async function gerarPDF() {
+			const existingPdfBytes = await fetch('/path/to/modelo.pdf').then(res => res.arrayBuffer());
+			const pdfDoc = await PDFDocument.load(existingPdfBytes);
+			 const page = pdfDoc.getPage(0);
+			
+			const form = pdfDoc.getForm();
+			
+			
+			const nomeField = form.createTextField('nomeField');
+			nomeField.setText(nome);
+			nomeField.addToPage(page, { x: 120, y: 340, width: 300, height: 20 });
+
+			
+			const idadeField = form.createTextField('idadeField');
+            idadeField.setText(idade);
+            idadeField.addToPage(page, { x: 120, y: 300, width: 300, height: 20 });
+			
+			
+			
+			const dropdownField = form.createDropdown('dropdownField');
+			dropdownField.addOptions(["Vazio", "Divinos", "Antigos","Afogados","Adubados","Matilha"]);
+			dropdownField.select(familia);  // Seleciona a opção inicial
+			dropdownField.addToPage(page, { x: 120, y: 350, width: 100, height: 20 });
+			
+			
+			
+			const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: "application/pdf" });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = "formulario_editavel.pdf";
+            link.click();
+        }

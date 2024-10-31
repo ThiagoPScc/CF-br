@@ -196,3 +196,4 @@
         atualizarFamTexto(); // Inicializa os textos das famílias
         atualizarSlide(); // Mostra a primeira imagem
     });
+	
