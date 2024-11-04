@@ -636,36 +636,85 @@ function criarFicha(){
 	
 	//código para PDF
 	
+	let val1hum = 0;
 	async function gerarPDF() {
-			const existingPdfBytes = await fetch('/path/to/modelo.pdf').then(res => res.arrayBuffer());
-			const pdfDoc = await PDFDocument.load(existingPdfBytes);
-			 const page = pdfDoc.getPage(0);
-			
-			const form = pdfDoc.getForm();
-			
-			
-			const nomeField = form.createTextField('nomeField');
-			nomeField.setText(nome);
-			nomeField.addToPage(page, { x: 120, y: 340, width: 300, height: 20 });
+		  const { PDFDocument } = PDFLib;
 
-			
-			const idadeField = form.createTextField('idadeField');
-            idadeField.setText(idade);
-            idadeField.addToPage(page, { x: 120, y: 300, width: 300, height: 20 });
-			
-			
-			
-			const dropdownField = form.createDropdown('dropdownField');
-			dropdownField.addOptions(["Vazio", "Divinos", "Antigos","Afogados","Adubados","Matilha"]);
-			dropdownField.select(familia);  // Seleciona a opção inicial
-			dropdownField.addToPage(page, { x: 120, y: 350, width: 100, height: 20 });
-			
-			
-			
-			const pdfBytes = await pdfDoc.save();
-            const blob = new Blob([pdfBytes], { type: "application/pdf" });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = "formulario_editavel.pdf";
-            link.click();
-        }
+		  // Carrega o PDF existente
+		  const existingPdfBytes = await fetch('documentos/fichaRpg.pdf').then(res => res.arrayBuffer());
+		  const pdfDoc = await PDFDocument.load(existingPdfBytes);
+		  const page = pdfDoc.getPage(0);
+
+		  // Inicializa o formulário no PDF
+		  const form = pdfDoc.getForm();
+
+		  // Cria um campo de texto para o nome
+		  const nomeField = form.createTextField('nomeField');
+		  nomeField.setText(nome);  // Substitua `nome` pela variável que contém o nome do personagem
+		  nomeField.addToPage(page, { x: 250, y: 450, width: 300, height: 20 });
+
+		  // Cria um campo de texto para a idade
+		  const idadeField = form.createTextField('idadeField');
+		  idadeField.setText(idade);  // Substitua `idade` pela variável que contém a idade do personagem
+		  idadeField.addToPage(page, { x: 250, y: 420, width: 300, height: 20 });
+		  
+		  // Cria um campo de texto para a valor
+		  const valorField = form.createTextField('valorField');
+		  valorField.setText(val); 
+		  valorField.addToPage(page, { x: 250, y: 400, width: 300, height: 20 });
+		  
+		   // Cria um campo de texto para a humanidade
+		  const humanidadeField = form.createTextField('humanidadeField');
+		  humanidadeField.setText(val1hum); 
+		  humanidadeField.addToPage(page, { x: 260, y: 310, width: 300, height: 20 });
+		  
+		  const vidaField = form.createTextField('vidaField');
+		  vidaField.setText(vida); 
+		  vidaField.addToPage(page, { x: 100, y: 280, width: 300, height: 20 });
+		  
+		  const ramField = form.createTextField('ramField');
+		  ramField.setText(ram); 
+		  ramField.addToPage(page, { x: 100, y: 260, width: 300, height: 20 });
+		  
+		  const vidaAtualField = form.createTextField('vidaAtualField');
+		  vidaAtualField.setText(vd); 
+		  vidaAtualField.addToPage(page, { x: 80, y: 280, width: 30, height: 20 });
+		  
+		  const ramAtualField = form.createTextField('ramAtualField');
+		  ramAtualField.setText(ram); 
+		  ramAtualField.addToPage(page, { x: 80, y: 260, width: 30, height: 20 });
+		  	  
+		  // Cria um campo de texto para a int
+		  const intField = form.createTextField('intField');
+		  intField.setText(inte); 
+		  intField.addToPage(page, { x: 230, y: 330, width: 300, height: 20 });
+		  
+		    // Cria um campo de texto para a for
+		  const forField = form.createTextField('forField');
+		  forField.setText(forc); 
+		  forField.addToPage(page, { x: 250, y: 400, width: 300, height: 20 });
+		  
+		  // Cria um campo de texto para a car
+		  const carField = form.createTextField('carField');
+		  carField.setText(car); 
+		  carField.addToPage(page, { x: 290, y: 200, width: 300, height: 20 });
+		  
+		    // Cria um campo de texto para a des
+		  const desField = form.createTextField('desField');
+		  desField.setText(des); 
+		  desField.addToPage(page, { x: 260, y: 200, width: 300, height: 20 });
+
+		  // Cria um campo de dropdown para a família
+		  const dropdownField = form.createDropdown('dropdownField');
+		  dropdownField.addOptions(["Vazio", "Divinos", "Antigos", "Afogados", "Adubados", "Matilha"]);
+		  dropdownField.select(familia);  // Substitua `familia` pela variável que contém a família selecionada
+		  dropdownField.addToPage(page, { x: 120, y: 260, width: 100, height: 20 });
+
+		  // Salva o PDF atualizado
+		  const pdfBytes = await pdfDoc.save();
+		  const blob = new Blob([pdfBytes], { type: "application/pdf" });
+		  const link = document.createElement('a');
+		  link.href = URL.createObjectURL(blob);
+		  link.download = "formulario_editavel.pdf";
+		  link.click();
+	}
