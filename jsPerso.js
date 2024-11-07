@@ -538,13 +538,12 @@ function escolhaPassado(passado) {
   switch (passado) {
     case 1:
       adicionarItem("Granada incendiária");
-      adicionarItem("Granada incendiária");
       adicionarItem("Barricada de metal");
       adicionarItem("Rastreador");
       adicionarItem("Maço de cigarro");
       adicionarItem("Corrente");
       adicionarItem("Caixa de ferramentas");
-      din += 1000;
+      din += 2000;
 
       break;
     case 2:
@@ -553,13 +552,17 @@ function escolhaPassado(passado) {
       adicionarItem("Barricada de metal");
       adicionarItem("Rastreador");
       adicionarItem("Maço de cigarro");
+	  adicionarItem("Bebida simples");
       din += 2000;
       break;
     case 3:
-      adicionarItem("Granada incendiária");
+	  adicionarItem("Lanterna descartável(uso único)");
+	  adicionarItem("Corda");
+	  adicionarItem("Bebida simples");
       adicionarItem("Granada incendiária");
       adicionarItem("Barricada de metal");
-      din += 5000;
+	  adicionarItem("Cachorro quente de Osasco superfaturado");
+      din += 3000;
       break;
   }
 }
@@ -636,58 +639,58 @@ async function gerarPDF() {
   // Cria um campo de texto para o nome
   const nomeField = form.createTextField("nomeField");
   nomeField.setText(String(nome)); // Substitua `nome` pela variável que contém o nome do personagem
-  nomeField.addToPage(page, { x: 250, y: 450, width: 300, height: 20 });
+  nomeField.addToPage(page, { x: 260, y: 778, width: 141, height: 20 });
 
   // Cria um campo de texto para a idade
   const idadeField = form.createTextField("idadeField");
   idadeField.setText(String(idade)); // Substitua `idade` pela variável que contém a idade do personagem
-  idadeField.addToPage(page, { x: 250, y: 420, width: 300, height: 20 });
+  idadeField.addToPage(page, { x: 260, y: 749, width: 32, height: 20 });
 
   // Cria um campo de texto para a valor
   const valorField = form.createTextField("valorField");
   valorField.setText(String(val));
-  valorField.addToPage(page, { x: 250, y: 400, width: 300, height: 20 });
+  valorField.addToPage(page, { x: 462, y: 689, width: 66, height: 20 });
 
   // Cria um campo de texto para a humanidade
   const humanidadeField = form.createTextField("humanidadeField");
   humanidadeField.setText(String(val1hum));
-  humanidadeField.addToPage(page, { x: 260, y: 310, width: 300, height: 20 });
+  humanidadeField.addToPage(page, { x: 487, y: 715, width: 41, height: 20 });
 
   const vidaField = form.createTextField("vidaField");
   vidaField.setText(String(vida));
-  vidaField.addToPage(page, { x: 100, y: 280, width: 300, height: 20 });
+  vidaField.addToPage(page, { x: 75, y: 535, width: 41, height: 20 });
 
   const ramField = form.createTextField("ramField");
   ramField.setText(String(ram));
-  ramField.addToPage(page, { x: 100, y: 260, width: 300, height: 20 });
+  ramField.addToPage(page, { x: 75, y: 511, width: 41, height: 20 });
 
   const vidaAtualField = form.createTextField("vidaAtualField");
   vidaAtualField.setText(String(vida));
-  vidaAtualField.addToPage(page, { x: 80, y: 280, width: 30, height: 20 });
+  vidaAtualField.addToPage(page, { x: 122, y: 535, width: 41, height: 20 });
 
   const ramAtualField = form.createTextField("ramAtualField");
   ramAtualField.setText(String(ram));
-  ramAtualField.addToPage(page, { x: 80, y: 260, width: 30, height: 20 });
+  ramAtualField.addToPage(page, { x: 122, y: 511, width: 41, height: 20 });
 
   // Cria um campo de texto para a int
   const intField = form.createTextField("intField");
   intField.setText(String(inte));
-  intField.addToPage(page, { x: 230, y: 330, width: 300, height: 20 });
+  intField.addToPage(page, { x: 216, y: 527, width: 40, height: 40 });
 
   // Cria um campo de texto para a for
   const forField = form.createTextField("forField");
   forField.setText(String(forc));
-  forField.addToPage(page, { x: 250, y: 400, width: 300, height: 20 });
+  forField.addToPage(page, { x: 319, y: 424, width: 40, height: 40 });
 
   // Cria um campo de texto para a car
   const carField = form.createTextField("carField");
   carField.setText(String(car));
-  carField.addToPage(page, { x: 290, y: 200, width: 300, height: 20 });
+  carField.addToPage(page, { x: 319, y: 527, width: 40, height: 40 });
 
   // Cria um campo de texto para a des
   const desField = form.createTextField("desField");
   desField.setText(String(des));
-  desField.addToPage(page, { x: 260, y: 200, width: 300, height: 20 });
+  desField.addToPage(page, { x: 216, y: 424, width: 40, height: 40 });
 
   // Cria um campo de dropdown para a família
   const dropdownField = form.createDropdown("dropdownField");
@@ -700,7 +703,169 @@ async function gerarPDF() {
     "Matilha",
   ]);
   dropdownField.select(familia); // Substitua `familia` pela variável que contém a família selecionada
-  dropdownField.addToPage(page, { x: 120, y: 260, width: 100, height: 20 });
+  dropdownField.addToPage(page, { x: 274, y: 715, width: 128, height: 20 });
+  
+  //segunda parte dos formulários
+  
+  const passField = form.createDropdown("passField");
+  passField.addOptions([
+    "Extrangeiro",
+    "Periferia",
+    "Playboy",
+  ]);
+  passField.select("Extrangeiro");
+  passField.addToPage(page, { x: 75, y: 643, width: 89, height: 20 });
+  
+  
+    
+  const profField = form.createDropdown("profField");
+  profField.addOptions([
+    "Extrangeiro",
+    "Periferia",
+    "Playboy",
+  ]);
+  profField.select("Extrangeiro");
+  profField.addToPage(page, { x: 82, y: 614, width: 82, height: 20 });
+  
+  //Anotações
+  
+
+  const ano1Filed = form.createTextField("ano1Filed");
+  ano1Filed.addToPage(page, { x: 36, y: 449, width: 124, height: 15});
+  
+  const ano2Filed = form.createTextField("ano2Filed");
+  ano2Filed.addToPage(page, { x: 36, y: 431, width: 124, height: 15});
+  
+  const ano3Filed = form.createTextField("ano3Filed");
+  ano3Filed.addToPage(page, { x: 36, y: 413, width: 124, height: 15});
+  
+  const dinField = form.createTextField("dinField");
+  dinField.setText(String(din));
+  dinField.addToPage(page, { x: 82, y: 388, width: 77, height: 20});
+  
+  
+  
+  // inventário e equipamento
+  
+   const item1Filed = form.createTextField("item1Filed");
+  item1Filed.setText(String(inventario[0].nome));
+  item1Filed.addToPage(page, { x: 30, y: 252, width: 95, height: 24 });
+  
+  const item1QFiled = form.createTextField("item1QFiled");
+  item1QFiled.setText(String(inventario[0].quantidade));
+  item1QFiled.addToPage(page, { x: 135, y: 252, width: 20, height: 24 });
+  
+  
+   const item2Filed = form.createTextField("item2Filed");
+  item2Filed.setText(String(inventario[1].nome));
+  item2Filed.addToPage(page, { x: 30, y: 215, width: 95, height: 24 });
+  
+  const item2QFiled = form.createTextField("item2QFiled");
+  item2QFiled.setText(String(inventario[1].quantidade));
+  item2QFiled.addToPage(page, { x: 135, y: 215, width: 20, height: 24 });
+  
+    
+   const item3Filed = form.createTextField("item3Filed");
+  item3Filed.setText(String(inventario[2].nome));
+  item3Filed.addToPage(page, { x: 30, y: 178, width: 95, height: 24 });
+  
+  const item3QFiled = form.createTextField("item3QFiled");
+  item3QFiled.setText(String(inventario[2].quantidade));
+  item3QFiled.addToPage(page, { x: 135, y: 178, width: 20, height: 24 });
+  
+    
+   const item4Filed = form.createTextField("item4Filed");
+  item4Filed.setText(String(inventario[3].nome));
+  item4Filed.addToPage(page, { x: 30, y: 141, width: 95, height: 24 });
+  
+  const item4QFiled = form.createTextField("item4QFiled");
+  item4QFiled.setText(String(inventario[3].quantidade));
+  item4QFiled.addToPage(page, { x: 135, y: 141, width: 20, height: 24 });
+  
+    
+   const item5Filed = form.createTextField("item5Filed");
+  item5Filed.setText(String(inventario[4].nome));
+  item5Filed.addToPage(page, { x: 30, y: 104, width: 95, height: 24 });
+  
+  const item5QFiled = form.createTextField("item5QFiled");
+  item5QFiled.setText(String(inventario[4].quantidade));
+  item5QFiled.addToPage(page, { x: 135, y: 104, width: 20, height: 24 });
+  
+  
+  const item6Filed = form.createTextField("item6Filed");
+  item6Filed.setText(String(inventario[5].nome));
+  item6Filed.addToPage(page, { x: 30, y: 67, width: 95, height: 24 });
+  
+  const item6QFiled = form.createTextField("item6QFiled");
+  item6QFiled.setText(String(inventario[5].quantidade));
+  item6QFiled.addToPage(page, { x: 135, y: 67, width: 20, height: 24 });
+  
+  
+   //direita
+   const item7Filed = form.createTextField("item7Filed");
+  item7Filed.addToPage(page, { x: 164, y: 252, width: 95, height: 24 });
+  
+  const item7QFiled = form.createTextField("item7QFiled");
+  item7QFiled.addToPage(page, { x: 269, y: 252, width: 20, height: 24 });
+  
+  
+   const item8Filed = form.createTextField("item8Filed");
+  item8Filed.addToPage(page, { x: 164, y: 215, width: 95, height: 24 });
+  
+  const item8QFiled = form.createTextField("item8QFiled");
+  item8QFiled.addToPage(page, { x: 269, y: 215, width: 20, height: 24 });
+  
+  
+   const item9Filed = form.createTextField("item9Filed");
+  item9Filed.addToPage(page, { x: 164, y: 178, width: 95, height: 24 });
+  
+  const item9QFiled = form.createTextField("item9QFiled");
+  item9QFiled.addToPage(page, { x: 269, y: 178, width: 20, height: 24 });
+  
+  
+   const item10Filed = form.createTextField("item10Filed");
+  item10Filed.addToPage(page, { x: 164, y: 141, width: 95, height: 24 });
+  
+  const item10QFiled = form.createTextField("item10QFiled");
+  item10QFiled.addToPage(page, { x: 269, y: 141, width: 20, height: 24 });
+  
+  
+   const item11Filed = form.createTextField("item11Filed");
+  item11Filed.addToPage(page, { x: 164, y: 104, width: 95, height: 24 });
+  
+  const item11QFiled = form.createTextField("item11QFiled");
+  item11QFiled.addToPage(page, { x: 269, y: 104, width: 20, height: 24 });
+  
+  
+   const item12Filed = form.createTextField("item12Filed");
+  item12Filed.addToPage(page, { x: 164, y: 67, width: 95, height: 24 });
+  
+  const item12QFiled = form.createTextField("item12QFiled");
+  item12QFiled.addToPage(page, { x: 269, y: 67, width: 20, height: 24 });
+  
+  
+  //arma secundária da ficha
+  
+  const itemSecField =form.createTextField("itemSecField");
+  itemSecField.addToPage(page, { x: 30, y: 28, width: 95, height: 24 });
+  
+   const item1SecModField = form.createTextField("item1SecModField");
+   item1SecModField.addToPage(page, { x: 135, y: 28, width: 80, height: 24 });
+   
+   const item1SecDanField = form.createTextField("item1SecDanField");
+   item1SecDanField.addToPage(page, { x: 220, y: 28, width: 30, height: 24 });
+  
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
 
   // Salva o PDF atualizado
   const pdfBytes = await pdfDoc.save();
