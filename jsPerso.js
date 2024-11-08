@@ -621,10 +621,18 @@ function criarFicha() {
 }
 
 //código para PDF
+let codAle = Math.floor(Math.random() * 90000);
 
 let val1hum = 0;
 async function gerarPDF() {
-  const { PDFDocument } = PDFLib;
+  const { PDFDocument ,rgb } = PDFLib;
+  
+  const imageInput = document.getElementById('imageUpload').files[0];
+
+            if (!imageInput) {
+                alert("Por favor, envie uma imagem para o personagem.");
+                return;
+            }
 
   // Carrega o PDF existente
   const pdfs =
@@ -632,14 +640,42 @@ async function gerarPDF() {
   const existingPdfBytes = await fetch(pdfs).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
   const page = pdfDoc.getPage(0);
+  
+  const imageBytes = await imageInput.arrayBuffer();
+            const imgType = imageInput.type;
+
+            let img;
+            if (imgType === 'image/jpeg') {
+                img = await pdfDoc.embedJpg(imageBytes);
+            } else if (imgType === 'image/png') {
+                img = await pdfDoc.embedPng(imageBytes);
+            } else {
+                alert("Formato de imagem não suportado. Use JPEG ou PNG.");
+                return;
+            }
 
   // Inicializa o formulário no PDF
   const form = pdfDoc.getForm();
+  
+			const imgWidth = 109;
+            const imgHeight = 88;
+            const xPosition = 40;
+            const yPosition = 702;
+
+            page.drawImage(img, {
+                x: xPosition,
+                y: yPosition,
+                width: imgWidth,
+                height: imgHeight,
+            });
 
   // Cria um campo de texto para o nome
   const nomeField = form.createTextField("nomeField");
   nomeField.setText(String(nome)); // Substitua `nome` pela variável que contém o nome do personagem
   nomeField.addToPage(page, { x: 260, y: 778, width: 141, height: 20 });
+  
+  
+   page.drawText(String(codAle), { x: 320, y: 754, size:12, color: rgb(0.58, 0.58, 0.58) });
 
   // Cria um campo de texto para a idade
   const idadeField = form.createTextField("idadeField");
@@ -676,21 +712,40 @@ async function gerarPDF() {
   const intField = form.createTextField("intField");
   intField.setText(String(inte));
   intField.addToPage(page, { x: 216, y: 527, width: 40, height: 40 });
+  
+  
+  const intModField = form.createTextField("intModField");
+  intModField.setText(String(parseInt(inte/5)));
+  intModField.addToPage(page, { x: 265, y: 541, width: 27, height: 27 });
+
 
   // Cria um campo de texto para a for
   const forField = form.createTextField("forField");
   forField.setText(String(forc));
   forField.addToPage(page, { x: 319, y: 424, width: 40, height: 40 });
+  
+   const forModField = form.createTextField("forModField");
+  forModField.setText(String(parseInt(forc/5)));
+  forModField.addToPage(page, { x: 368, y: 438, width: 27, height: 27 });
 
   // Cria um campo de texto para a car
   const carField = form.createTextField("carField");
   carField.setText(String(car));
   carField.addToPage(page, { x: 319, y: 527, width: 40, height: 40 });
+  
+  
+   const carModField = form.createTextField("carModField");
+  carModField.setText(String(parseInt(car/5)));
+  carModField.addToPage(page, { x: 368, y: 541, width: 27, height: 27 });
 
   // Cria um campo de texto para a des
   const desField = form.createTextField("desField");
   desField.setText(String(des));
   desField.addToPage(page, { x: 216, y: 424, width: 40, height: 40 });
+  
+  const desModField = form.createTextField("desModField");
+  desModField.setText(String(parseInt(des/5)));
+  desModField.addToPage(page, { x: 265, y: 438, width: 27, height: 27 });
 
   // Cria um campo de dropdown para a família
   const dropdownField = form.createDropdown("dropdownField");
@@ -847,13 +902,65 @@ async function gerarPDF() {
   //arma secundária da ficha
   
   const itemSecField =form.createTextField("itemSecField");
-  itemSecField.addToPage(page, { x: 30, y: 28, width: 95, height: 24 });
+  itemSecField.addToPage(page, { x: 30, y: 24, width: 95, height: 24 });
   
    const item1SecModField = form.createTextField("item1SecModField");
-   item1SecModField.addToPage(page, { x: 135, y: 28, width: 80, height: 24 });
+   item1SecModField.addToPage(page, { x: 135, y: 24, width: 92, height: 24 });
    
    const item1SecDanField = form.createTextField("item1SecDanField");
-   item1SecDanField.addToPage(page, { x: 220, y: 28, width: 30, height: 24 });
+   item1SecDanField.addToPage(page, { x: 238, y: 24, width: 51, height: 24 });
+  //Equipamento
+  
+  const equipamentoAtual = form.createTextField("equipamentoAtual");
+  equipamentoAtual.addToPage(page, { x: 309, y: 253, width: 155, height: 20 });
+  
+  const equipamentoAtualDan = form.createTextField("equipamentoAtualDan");
+  equipamentoAtualDan.addToPage(page, { x: 475, y: 253, width: 60, height: 20 })
+  
+  const equipamentoAtualDesc = form.createTextField("equipamentoAtualDesc");
+  equipamentoAtualDesc.addToPage(page, { x: 309, y: 226, width: 225, height: 20 });
+  
+  //modficações
+  
+  const modBraba = form.createTextField("modBraba");
+  modBraba.addToPage(page, { x: 309, y: 184, width: 155, height: 20 });
+  
+  const modBrabaDesc = form.createTextField("modBrabaDesc");
+  modBrabaDesc.addToPage(page, { x: 473, y: 184, width: 62, height: 20 })
+  
+  const ModBrabaDescs = form.createTextField("ModBrabaDescs");
+  ModBrabaDescs.addToPage(page, { x: 309, y: 160, width: 155, height: 20 });
+  
+   const modBrabaDesc2 = form.createTextField("modBrabaDesc2");
+  modBrabaDesc2.addToPage(page, { x: 473, y: 160, width: 62, height: 20 })
+  
+  
+  
+  const mod1 = form.createTextField("mod1");
+  mod1.addToPage(page, { x: 309, y: 128, width: 155, height: 20 });
+  
+  const mo1D = form.createTextField("mo1D");
+  mo1D.addToPage(page, { x: 473, y: 128, width: 62, height: 20 })
+  
+  
+   const mod2 = form.createTextField("mod2");
+  mod2.addToPage(page, { x: 309, y: 94, width: 155, height: 20 });
+  
+  const mod2D = form.createTextField("mod2D");
+  mod2D.addToPage(page, { x: 473, y: 94, width: 62, height: 20 })
+  
+   const mod3 = form.createTextField("mod3");
+  mod3.addToPage(page, { x: 309, y: 60, width: 155, height: 20 });
+  
+  const mod3D = form.createTextField("mod3D");
+  mod3D.addToPage(page, { x: 473, y: 60, width: 62, height: 20 })
+  
+  const mod4 = form.createTextField("mod4");
+  mod4.addToPage(page, { x: 309, y: 26, width: 155, height: 20 });
+  
+  const mod4D = form.createTextField("mod4D");
+  mod4D.addToPage(page, { x: 473, y: 26, width: 62, height: 20 })
+ 
   
    
   
