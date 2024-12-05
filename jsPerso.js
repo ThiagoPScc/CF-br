@@ -25,6 +25,8 @@ let familia = "";
 let inventario = [];
 let nome = "";
 let idade = 0;
+let profissao ="";
+let passa = "";
 
 //variaveis das escolhas
 let classe = 0;
@@ -214,7 +216,7 @@ let para3 = document.getElementById("parag3Fam");
 para3.innerHTML = par3[0];
 
 const btnEscFam = document.getElementById("btnEscolhaFam");
-btnEscFam.setAttribute("onclick", btnClaVet[0]);
+btnEscFam.setAttribute("onclick", btnEscolhaFam[0]);
 
 function updateTextFam() {
   const titFam1 = document.getElementById("tituFamEsc");
@@ -311,6 +313,7 @@ function resetarDados() {
   hum = 0;
   val = 0;
   din = 0;
+  profissao = '';
 }
 
 //função para calcular a escolha da classe
@@ -388,6 +391,7 @@ function escolhaClasse(classe) {
 function escolhaProfissao(prof) {
   switch (prof) {
     case 1:
+	  profissao = "Bombeiro";
       des += 1;
       forc += 5;
       inte += 0;
@@ -395,6 +399,7 @@ function escolhaProfissao(prof) {
       car += 3;
       break;
     case 2:
+	  profissao = "Médico";
       des += 3;
       forc += 0;
       inte += 5;
@@ -402,6 +407,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 3:
+	  profissao = "Vendedor";
       des += 3;
       forc += 0;
       inte += 0;
@@ -409,6 +415,7 @@ function escolhaProfissao(prof) {
       car += 5;
       break;
     case 4:
+	  profissao = "Mecânico";
       des += 1;
       forc += 3;
       inte += 5;
@@ -416,6 +423,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 5:
+	  profissao = "Político";
       des += 0;
       forc += 0;
       inte += 3;
@@ -423,6 +431,7 @@ function escolhaProfissao(prof) {
       car += 5;
       break;
     case 6:
+	  profissao = "Lutador";
       des += 3;
       forc += 5;
       inte += 0;
@@ -430,6 +439,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 7:
+	  profissao = "Pedreiro";
       des += 1;
       forc += 5;
       inte += 0;
@@ -437,6 +447,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 8:
+	  profissao = "Pesquisador";
       des += 1;
       forc += 0;
       inte += 5;
@@ -444,6 +455,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 9:
+	  profissao = "Recepcionista";
       des += 5;
       forc += 0;
       inte += 0;
@@ -451,6 +463,7 @@ function escolhaProfissao(prof) {
       car += 3;
       break;
     case 10:
+	  profissao = "Policial";
       des += 5;
       forc += 3;
       inte += 0;
@@ -458,6 +471,7 @@ function escolhaProfissao(prof) {
       car += 1;
       break;
     case 11:
+	  profissao = "Técnico";
       des += 0;
       forc += 3;
       inte += 5;
@@ -465,10 +479,12 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 12:
+	  profissao = "Desempregado";
       desempregado();
       console.log("teste");
       break;
     case 13:
+	  profissao = "ladrão";
       des += 5;
       forc += 1;
       inte += 3;
@@ -476,6 +492,7 @@ function escolhaProfissao(prof) {
       car += 0;
       break;
     case 14:
+	  profissao = "Humorista";
       des += 0;
       forc += 0;
       inte += 1;
@@ -483,6 +500,7 @@ function escolhaProfissao(prof) {
       car += 5;
       break;
     case 15:
+	  profissao = "Golpista";
       des += 3;
       forc += 0;
       inte += 1;
@@ -490,6 +508,7 @@ function escolhaProfissao(prof) {
       car += 5;
       break;
     case 16:
+	  profissao = "Professor";
       des += 0;
       forc += 0;
       inte += 5;
@@ -537,6 +556,7 @@ function desempregado() {
 function escolhaPassado(passado) {
   switch (passado) {
     case 1:
+	passa = "Extrangeiro";
       adicionarItem("Granada incendiária");
       adicionarItem("Barricada de metal");
       adicionarItem("Rastreador");
@@ -547,6 +567,7 @@ function escolhaPassado(passado) {
 
       break;
     case 2:
+	passa = "Periferia";
       adicionarItem("Equipamento de trilha de rede barato");
       adicionarItem("Granada incendiária");
       adicionarItem("Barricada de metal");
@@ -556,6 +577,7 @@ function escolhaPassado(passado) {
       din += 2000;
       break;
     case 3:
+	passa = "playboy";
 	  adicionarItem("Lanterna descartável(uso único)");
 	  adicionarItem("Corda");
 	  adicionarItem("Bebida simples");
@@ -675,7 +697,7 @@ async function gerarPDF() {
   nomeField.addToPage(page, { x: 260, y: 778, width: 141, height: 20 });
   
   
-   page.drawText(String(codAle), { x: 320, y: 754, size:12, color: rgb(0.58, 0.58, 0.58) });
+   page.drawText(String(codAle), { x: 326, y: 756, size:12, color: rgb(0.58, 0.58, 0.58) });
 
   // Cria um campo de texto para a idade
   const idadeField = form.createTextField("idadeField");
@@ -768,18 +790,31 @@ async function gerarPDF() {
     "Periferia",
     "Playboy",
   ]);
-  passField.select("Extrangeiro");
+  passField.select(passa);
   passField.addToPage(page, { x: 75, y: 643, width: 89, height: 20 });
   
   
     
   const profField = form.createDropdown("profField");
   profField.addOptions([
-    "Extrangeiro",
-    "Periferia",
-    "Playboy",
+    "Bombeiro",
+	"Médico",
+	"Vendedor",
+	"Mecânico",
+	"Político",
+	"Lutador",
+	"Pedreiro",
+	"Pesquisador",
+	"Recepcionista",
+	"Policial",
+	"Técnico",
+	"Desempregado",
+	"Ladrão",
+	"Humorista",
+	"Golpista",
+	"Professor",
   ]);
-  profField.select("Extrangeiro");
+  profField.select(profissao);
   profField.addToPage(page, { x: 82, y: 614, width: 82, height: 20 });
   
   //Anotações
