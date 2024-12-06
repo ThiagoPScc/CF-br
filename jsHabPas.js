@@ -72,13 +72,13 @@ filterAndSearchPass();
 	{ title: "Barreira de carbono", class: ["Máquina","BigBig"], type: "status", description: "Uma barreira é colocada e serve como proteção durante combate.", cost1: 3, level1: "Vida = 30",cost2: 4, level2: "Vida = 50" ,cost3: 5, level3: "Vida = 70"},
 	{ title: "Bioamplificação", class: ["Açogueiro","Ator"], type: "status", description: "Aumenta todos atributos base do alvo(somente jogadores) durante 1d4 de turnos.", cost1: 3, level1: "+1",cost2: 4, level2: "+2" ,cost3: 6, level3: "+3" },
 	{ title: "Biohacker", class: todos, type: "status", description: "A habilidade permite invadir o corpo de um inimigo e fazer perder controle de alguma parte cibernética.(O inimigo pode tentar resistir ou retomar controle usando a ação bônus de seus turnos).", cost1: 5, level1: "sem bônus na rolagem + mod de int.",cost2: 7, level2: "+2 de bônus na rolagem + mod de int.",cost3: 9, level3: "+4 de bônus na rolagem + mod de int." },
-	{ title: "Bio-amigo", class: ["Açogueiro","Ator"], type: "criaturas/robos", description: "Um pequeno ser mutante com aparência de sua escolha, irá te auxiliar durante toda a sessão, só pode ser usado uma vez por mesa.", cost1: 8, level1: "dano  = 2d10 + seu mod de int + o mod de car. | vida = 30 +  mod de int * mod de car."},
+	{ title: "Bio-amigo", class: ["Açogueiro","Ator"], type: "criaturaserobos", description: "Um pequeno ser mutante com aparência de sua escolha, irá te auxiliar durante toda a sessão, só pode ser usado uma vez por mesa.", cost1: 8, level1: "dano  = 2d10 + seu mod de int + o mod de car. | vida = 30 +  mod de int * mod de car."},
 	{ title: "Bio Escudo", class: ["BigBig","Açogueiro"], type: "status", description: "Sua Vida ou a de um aliado é aumentada temporariamente, usando como base a quantidade de partes NÃO robóticas do seu corpo.", cost1: 3, level1: "+1d4 de vida por parte.",cost2: 5, level2: "+1d6 de vida por parte." ,cost3: 8, level3: "+1d10 de vida por parte." },
-	{ title: "Bombardeio neural", class: todos, type: "dano", description: "Hack que permite invadir o sistema de um inimigo e atacá-lo à distância sem ser rastreado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
-	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 3, level1: 2,cost2: 4, level2: 2 ,cost3: 6, level3: 2 },
-	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
-	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
-	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
+	{ title: "Bombardeio neural", class: todos, type: "dano", description: "Hack que permite invadir o sistema de um inimigo e atacá-lo à distância sem ser rastreado.", cost1: 3, level1: "Dano = 2d5 + mod de Int.",cost2: 4, level2: "Dano = 2d10 + mod de Int." ,cost3: 6, level3: "Dano = 3d8 + mod de Int." },
+	{ title: "Cortina digital", class: todos, type: "status", description: "Permite uma pessoa atravessar áreas com sistema de seguranças sem ser rastreado.", cost1: 5, level1: "Essa habilidade dura 5 turnos" },
+	{ title: "Conexão-neural", class: ["Nerd","Ator","Açogueiro"], type: "status", description: "Permite entrar dentro do sistema de um aliado e auxiliá-lo em algum teste.", cost1: 4, level1: "+1 + mod de car.",cost2: 6, level2: "+2 + mod de car." ,cost3: 7, level3:"+3 + mod de car." },
+	{ title: "Criptografia", class: ["Máquina"], type: "status", description: "Permite decifrar a maioria dos textos/mensagens/documentos ou escondê-los.", cost1: 3 },
+	{ title: "Clonagem", class: ["Ator"], type: "status", description: "Cria uma imitação idêntica a você para distrair inimigos.", cost1: 3, level1: "cria somente uma cópia com 3 pontos de resistência que são perdidos conforme recebe dano." },
 	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
 	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
 	{ title: "Cura Mágica", class: ["Nerd"], type: "cura", description: "Restaura vida ao aliado.", cost1: 8, level1: 2,cost2: 8, level2: 2 ,cost3: 8, level3: 2 },
@@ -123,6 +123,7 @@ function displaySkills(skillsList) {
         skillDiv.classList.add('skill-card');
         skillDiv.classList.add(`${skill.type}-bg`);
         skillDiv.innerHTML = `
+			<div class="skillFund">
             <h3 class="skill-title">${skill.title}</h3>
             <p> ${skill.class.join(', ')}</p>
             <p class="skill-description">${skill.description}</p>
@@ -132,6 +133,7 @@ function displaySkills(skillsList) {
             <p><strong>Custo de ram 2:</strong> ${skill.cost2} <br> <strong>Nível 2:</strong> ${skill.level2}</p>
 			<hr>
             <p><strong>Custo de ram 3:</strong> ${skill.cost3} <br> <strong>Nível 3:</strong> ${skill.level3}</p>
+			</div>
         `;
         skillsContainer.appendChild(skillDiv);
     });

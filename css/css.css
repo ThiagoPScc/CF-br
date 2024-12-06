@@ -60,7 +60,7 @@ body.dark-mode {
 }
 
 body.dark-mode #txtLink {
-    color: #1E1E1E; /* Cor do link em modo escuro */
+    color: white; /* Cor do link em modo escuro */
 }
 
 body.dark-mode #txtLink:hover {
@@ -75,10 +75,18 @@ body.dark-mode img.dark-mode {
     display: block;
 }
 header{
+background-color: #1E1E1E ;
 position: fixed;
 top: 0;
 width:100%;
 z-index:2;}
+
+.--bs-body-color{
+	background-color:white;
+}
+body.dark-mode .--bs-body-color{
+	background-color:#1e1e1e;
+}
 
 .carrossel{
 margin-top:8vh;}
@@ -107,7 +115,7 @@ background-color:#E81111;
 }
 #toggle-button{
 	margin-left:5%;
-	background-color:white;
+	background-color:transparent;
 	width:50px;
     padding: 10px;
     border: none;

@@ -51,19 +51,40 @@
     color: black;
     width: 20%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     background-color: #f9f9f9;
-    transition: background 0.8s ease, -webkit-text-fill-color 0.8s ease; /* Suaviza a transição */
- 
+    border-radius: 5px;
+    transition: background 0.5s ease, -webkit-text-fill-color 0.5s ease, box-shadow 0.5s ease; /* Suaviza a transição */
+    box-shadow: none; /* Sem sombra inicialmente */
+	transform: scale(1);
+}
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1); /* Tamanho inicial */
+    }
+    50% {
+        transform: scale(1.01); /* Aumenta ligeiramente */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho normal */
+    }
 }
 
 .skill-card:hover {
-	
-    background: linear-gradient(to right, #2196f3, #43a047, #eeff41, #eeff41);
-    -webkit-background-clip: text;
+    box-shadow: rgba(128, 128, 128, 0.4) 5px 5px, 
+                rgba(128, 128, 128, 0.3) 10px 10px, 
+                rgba(128, 128, 128, 0.2) 15px 15px, 
+                rgba(128, 128, 128, 0.1) 20px 20px, 
+                rgba(128, 128, 128, 0.05) 25px 25px;
+				animation: pulseEffect 0.6s ease-in-out forwards;}
+
+ .dark-mode .skill-card:hover{
+	box-shadow: rgba(0, 0, 10, 0.25) 0px 0px 30px 30px  inset;
+    background: linear-gradient(to right, #2196f3, #43a047, #ffcb00, #ffcb00);
+	 -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+	animation:none;
 }
+
 .skill-title {
     font-size: 18px;
     font-weight: bold;
