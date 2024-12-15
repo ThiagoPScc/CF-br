@@ -115,7 +115,23 @@ filterAndSearchPass();
     { title: "K.O.", class: ["Valentão"], type: "dano", description: "Um golpe que causa dano baseado na vida perdida do alvo.", cost1: 3, level1: "causa 30% da vida perdida do alvo.",cost2: 5, level2: "causa 50% da vida perdida do alvo." ,cost3: 8, level3: "causa 75% da vida perdida do alvo."},
     { title: "Kamikaze cibernético", class: ["Máquina"], type: "dano", description: "Hack que causa dano em inimigos (distribuindo o dano total) a distância, o valor do dano é baseado na quantidade de vida que você quer sacrificar.", cost1: 5, level1: "Toda a vida sacrificada.",cost2: 7, level2: "Toda a vida sacrificada + 20 %." ,cost3: 10, level3: "Toda a vida sacrificada + 50 %."},
     { title: "lábia", class: todos, type: "status", description: "Aumenta sua chance de passar em testes de enganação e negociação.", cost1: 5, level1: "sem bônus na rolagem + mod de Car.",cost2: 7, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 10, level3: "+4 de bônus na rolagem + mod de Car." },
+    { title: "Míssil anti aéreo", class: todos, type: "dano", description: "Um míssil é jogado em direção a um grupo de inimigos, causando 3d20 de dano + valor do seu atributo principal .", cost1: 20, level1: "O dano desta habilidade ignora barreiras."},
+    { title: "Mão rápidas pés lentos", class: ["Valentão"], type: "dano", description: "Permite que faça ataques corpo a corpo duas vezes no turno, mas tira metade de sua mobilidade.", cost1: 5, level1: "Essa habilidade aumenta em 3 o custo de ram para cada uso durante o combate."},
+    { title: "N.E.M.E.S.I.S.", class: todos, type: "criaturaserobos", description: "Um robô com uma única missão: eliminar um alvo. Este robô causa 1d20 de dano e tem 80 de vida, mas ele só ataca um alvo específico.", cost1: 10, level1: "Ao exterminar um alvo, outro inimigo pode ser escolhido para se tornar o alvo"},
+    { title: "Magnetismo", class: ["Nerd"], type: "dano", description: "Te permite controlar objetos metálicos. Pode ser usado para causar dano também.", cost1: 2, level1: "1d6 de dano" ,cost2: 6, level2: "1d12 de dano" ,cost3: 8, level3: "2d12 de dano"},
+    { title: "Nuvem tóxica", class: todos, type: "dano", description: "gera uma nuvem tóxica a distância que causa dano de envenenamento em uma área.", cost1: 4, level1: "1d4 de dano." ,cost2: 8, level2: "2d6 de dano." ,cost3: 12, level3: "2d8 de dano."},
+    { title: "Necromancia cibernética", class: ["Máquina","Açogueiro"], type: "criaturaserobos", description: "Te permite reanimar um inimigo abatido para te auxiliar durante o combate, ele terá metade dos atributos do inimigo em vida.", cost1: 10, level1: "Caso o zumbi seja eliminado, não será possível reanimá-lo novamente."},
+    { title: "Óptica  melhorada" , class: todos, type: "dano", description: "Seus tiros causam dano a mais baseado na sua distância do alvo durante 3 turnos.", cost1: 3, level1: "+1d6 de dano a cada 5 metros + mod de destreza" ,cost2: 5, level2: "+2d6 de dano a cada 5 metros + mod de destreza" ,cost3: 7, level3: "3d6 de dano a cada 5 metros + mod de destreza * 2"},
+    { title: "Ninjutsu elétrico", class: ["Pistoleiro"], type: "dano", description: "Seus ataques furtivos de qualquer fonte causam dano elétrico adicional durante 3 turnos.", cost1: 5, level1: "1d10 de dano" ,cost2: 8, level2: "2d10 de dano" ,cost3: 10, level3: "3d10 de dano."},
+    { title: "Onda de raiva", class: ["Ator"], type: "status", description: "Desorienta alvos dentro de uma área, causando uma histeria em massa. ", cost1: 15, level1: "Todos os alvos dentro da área sofrem o mod de car * 5. Após usar esta habilidade, não será possível dialogar com os inimigos."},
+    { title: "Nanobots", class: ["Açogueiro"], type: "cura", description: "Envia mini robôs para curar ou causar dano que ignora armadura durante 3 turnos", cost1: 3, level1: "1d6 de cura ou  dano." ,cost2: 7, level2: "2d8 de cura ou  dano." ,cost3: 10, level3: "3d6 de cura ou  dano + mod de int."},
+    { title: "Onda óptica", class: todos, type: "status", description: "Causa dano as ópticas dos inimigos dentro de 5 metros fazendo com que recebam desvantagem em testes de ataque, só pode usar uma vez por batalha.", cost1: 4, level1: " -1 de desvantagem" ,cost2: 8, level2: "-2 de desvantagem" ,cost3: 12, level3: "-3 de desvantagem"},
+    { title: "Presa fácil", class: todos, type: "status", description: "Desmotiva um alvo, após isto diminui a chance de entrar em combate ou de resistir a outras ações", cost1: 5, level1: "rolagem + mod de Car." ,cost2: 6, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 8, level3: "+4 de bônus na rolagem + mod de Car."},
     { title: "Lamúria", class: ["Ator"], type: "status", description: "Desmotiva um alvo, após isto diminui a chance de entrar em combate ou de resistir a outras ações", cost1: 5, level1: "rolagem + mod de Car." ,cost2: 6, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 8, level3: "+4 de bônus na rolagem + mod de Car."},
+    { title: "Lamúria", class: ["Ator"], type: "status", description: "Desmotiva um alvo, após isto diminui a chance de entrar em combate ou de resistir a outras ações", cost1: 5, level1: "rolagem + mod de Car." ,cost2: 6, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 8, level3: "+4 de bônus na rolagem + mod de Car."},
+    { title: "Lamúria", class: ["Ator"], type: "status", description: "Desmotiva um alvo, após isto diminui a chance de entrar em combate ou de resistir a outras ações", cost1: 5, level1: "rolagem + mod de Car." ,cost2: 6, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 8, level3: "+4 de bônus na rolagem + mod de Car."},
+    { title: "Lamúria", class: ["Ator"], type: "status", description: "Desmotiva um alvo, após isto diminui a chance de entrar em combate ou de resistir a outras ações", cost1: 5, level1: "rolagem + mod de Car." ,cost2: 6, level2: "+2 de bônus na rolagem + mod de Car." ,cost3: 8, level3: "+4 de bônus na rolagem + mod de Car."},
+
 
 
 
@@ -161,7 +177,7 @@ function displaySkills(skillsList) {
             <p> ${skill.class.join(', ')}</p>
             <p class="skill-description">${skill.description}</p>
 			<hr>
-            <p><strong>Custo de ram 1:</strong> ${skill.cost1} <br> <strong>Nível 1:</strong> ${skill.level1}</p>
+            <p><strong>Custo de ram 1:</strong> ${skill.cost1} <br> <strong>Descrição adicional:</strong> ${skill.level1}</p>
 			<hr>
            </div>
         `;
