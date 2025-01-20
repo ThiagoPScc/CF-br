@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<label>Digite quantas horas estuda por dia útil na semana</label>
+<input type="text" id="horas">
+<br>
+<label>você estuda final de semana? 1)sim  2)não </label>
+<input type="text" id="validacao">
+<br>
+<button type="button" onclick="acao()">Calcular</button>
+<br>
+<div id="novoElemento"></div>
+<label>total de horas</label>
+<input type="text" id="result">
+
+
+<p id="demo"></p>
+
+<script>
+ let horas;
+function acao(){
+  horas = document.getElementById("horas").value;
+  let valida = document.getElementById("validacao").value;
+  let total = 0;
+  if(valida == "1"){
+	console.log(valida);
+  	criarElemento();
+  }
+  else{
+  	total = 22 * horas;
+    document.getElementById("result").value = total;
+  }  
+}
+
+function criarElemento(){
+  const container = document.getElementById("novoElemento");
+  
+  const novoText = document.createTextNode("Quantas horas estuda no final de semana?");
+  container.appendChild(novoText);
+  
+  const inputHorasFimd = document.createElement("input");
+  inputHorasFimd.setAttribute("type","text");
+  inputHorasFimd.setAttribute("id","horasFim");
+  container.appendChild(inputHorasFimd);
+  
+  const botaoCalc = document.createElement("button");
+  botaoCalc.setAttribute("onclick","calc2()");
+  container.appendChild(botaoCalc);
+  
+}
+
+function calc2(){
+	console.log("s");
+	let horasFim = document.getElementById("horasFim").value;
+	let total = 22 * horas + 8 * horasFim;
+	document.getElementById("result").value = total;
+}
+</script>
+
+</body>
+</html>
