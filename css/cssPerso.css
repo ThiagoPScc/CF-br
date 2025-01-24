@@ -80,6 +80,7 @@ color:white;
     width: 20%;
     height: auto; /* Use auto para ajustar conforme o conteúdo */
     background-color: red;
+	text-align:center;
     min-width: 200px;
     margin-bottom: 4%;
     position: relative; /* Necessário para a hover-content funcionar corretamente */
