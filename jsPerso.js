@@ -65,7 +65,7 @@ function mostraDados() {
 let indexClass = 0;
 
 const titClass = [
-  "<div class = 'textoClasse'><img class='logoClasse' src='img/LogoBigBig.png'><h2>BigBig</h2></div><br> Sua força e tamanho te garantem uma presença que nenhuma roupa de grife pode alcançar. Os Bigs não só intimidam, mas dominam. Dizem que podem dobrar carros e atropelar tanques apenas por diversão... ou será que é verdade? De qualquer forma, ninguém é louco o suficiente para testar.<br> <img class='fotoDescClasse' src='img/iconPerso.png'>",
+  "<div class = 'textoClasse'><img class='logoClasse' src='img/LogoBigBig.png'><h2>BigBig</h2></div><br> Sua força e tamanho te garantem uma presença que nenhuma roupa de grife pode alcançar. Os Bigs não só intimidam, mas dominam. Dizem que podem dobrar carros e atropelar tanques apenas por diversão... ou será que é verdade? De qualquer forma, ninguém é louco o suficiente para testar.<br><h2>Atributos</h2> <table><tr><th>Vida</th><td>50</td></tr><tr><th>Vida</th><td>50</td></tr><tr><th>Vida</th><td>50</td></tr><tr><th>Vida</th><td>50</td></tr><tr><th>Vida</th><td>50</td></tr><tr><th>Vida</th><td>50</td></tr></table>",
   "<div class = 'textoClasse'><img class='logoClasse' src='img/LogoNerd.png'><h2>Nerd</h2></div><br> Sua mente é sua arma mais letal. Com inteligência e raciocínio rápido, você realiza façanhas que outros julgariam impossíveis. Os Nerds são mestres do conhecimento e da lógica, mas não espere que se destaquem em algo físico. Afinal, eles dominam o mundo a partir do teclado.<br> <img class='fotoDescClasse' src='img/iconPerso.png'>",
   "<div class = 'textoClasse'><img class='logoClasse' src='img/LogoPistoleiro.png'><h2>Pistoleiro</h2></div><br>Força bruta não é o seu forte, mas suas habilidades com armas transformam você em uma verdadeira máquina de precisão. Até os maiores brutamontes pensam duas vezes antes de te enfrentar, afinal, quem em sã consciência traz uma faca para um tiroteio?.<br> <img class='fotoDescClasse' src='img/iconPerso.png'>",
   "<div class = 'textoClasse'><img class='logoClasse' src='img/LogoValentao.png'><h2>Valentão</h2></div><br>Nascidos para lutar, os Valentões combinam força e velocidade para resolver tudo com os punhos ou com armas. Especialistas em combates corpo a corpo e de média distância, eles não fogem de uma briga, mas provavelmente não serão muito úteis quando o assunto exige sutileza ou intelecto.<br> <img class='fotoDescClasse' src='img/iconPerso.png'>",
@@ -75,13 +75,13 @@ const titClass = [
 ];
 
 const desClass = [
-  "<h2>Atributos</h2><table><tr><td>Vida</td><td>50</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2><table><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
-  "<h2>Atributos</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2> Passiva:Seu personagem recebe as 5 modificações do nível novato de graça.<br>Melhorias com o aumento no nível de valor. <br>Todos:+1 de cada atributo, + 2 para um atributo a sua escolha e +2d4 de vida. <br>Boato:Escolha o upgrade de “Boato” de alguma classe para si e +5 pontos de atributos a sua escolha. <br>Notícia:Escolha o upgrade de “Notícia” de alguma classe para si e +5 pontos de atributos a sua escolha. <br>Lenda:Você pode escolher uma passiva, o mestre deve aprová-la, você agora também possui a passiva: “Backup”,mesmo que seus pontos de vida cheguem a zero, é possível que algum membro da sua equipe salve seus dados e seu personagem volte ao jogo na próxima mesa.  <br> Mito:Você deve ir na lista de passivas míticas e escolher uma.",
+  "<h2>Passiva</h2><table><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2></tr><tr><th>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
+  "<h2>Passiva</h2></tr><tr><td>Row 1</td><td>Row 2</td></tr></table> Curabitur rhoncus sagittis vestibulum. Morbi viverra mollis enim quis lobortis.",
 ];
 
 const imagens = [
