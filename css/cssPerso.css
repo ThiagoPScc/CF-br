@@ -55,9 +55,7 @@ th,td{
     padding: 2px;
 	
 }
-th {
- 
-        }
+
 		
 .fotoDescClasse{
 	margin-top:5%;
@@ -99,15 +97,26 @@ color:white;
 }
 
 .imgBtnCla img{
-	width:100%;
+	width:80%;
+    margin: auto;
 }
 .colTxt{
 	text-align:justify;
 	padding:2% 3%;
     background-color: red;
     width:40%;
+    height: 90vh;
     min-width: 250px;
-	font-size:1.27em;
+	
+}
+.colTxt2{
+	text-align:justify;
+	padding:2% 3%;
+    background-color: red;
+    width:40%;
+    height: 90vh;
+    min-width: 250px;
+	
 }
 .conteudoClasse{
 	display:flex;
@@ -270,6 +279,10 @@ color:white;
 	.logoClasse{
 	width:10%;
 }
+.imgBtnCla img{
+	width:100%;
+ 
+}
 	
 	.txtBtnFam{
 	
@@ -281,7 +294,13 @@ color:white;
     .colTxt {
       display: block;
       width: 100%;
+      height: 50vh;
     }
+    .colTxt2 {
+        display: block;
+        width: 100%;
+        height: 40vh;
+      }
 	.imgBtnCla img{
 	width:100%;
 }
@@ -292,7 +311,7 @@ color:white;
 	  width:50%;
 	}
   
-  .colTxt{
+  .colTxt,.colTxt2{
 	
 	font-size:0.9em;
 	}
@@ -301,4 +320,5 @@ color:white;
   
   
  }
+}
   
