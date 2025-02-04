@@ -150,7 +150,7 @@ function mudarIndexFam(i) {
 }
 
 const titFam = [
-  "Vazio",
+  "Sem família",
   "Divinos",
   "Antigos",
   "Afogados",
@@ -159,30 +159,39 @@ const titFam = [
 ];
 
 const par1 = [
+  "Você não pertence a nenhuma das grandes famílias. Não jurou lealdade a ninguém, não segue regras além das suas. Isso faz de você alguém livre… e vulnerável. Sem alianças para te proteger, sem privilégios para te dar vantagem, você é apenas mais um na multidão. Alguns te veem como corajoso, alguém que se recusa a se curvar para o sistema. Outros te enxergam como presa fácil, um alvo sem retaguarda. No fim, sua sobrevivência depende apenas de você. Está pronto para encarar o mundo sozinho? <br><br><h4>Caracteristicas</h4>Sem obrigações com as famílias.<br>Sem bônus das famílias.<br>Visto como presa fácil, mas respeitado se conseguir mostrar força.",
   "Os Divinos são um grupo altamente religioso que cuida das pessoas que desistiram do mundo, dando fé a elas, mas isto não significa que sejam necessariamente bons. As cruzadas armadas a outros grupos concorrentes e os diversos casos de regras absurdas em monastérios e instituições chegam ao ouvido do povo. Todos sabem que existe algo de errado nesse grupo, mas ninguém sabe exatamente ao certo o que. <br><br><h4>Caracteristicas</h4>Altamente religiosos, alguns chegam a ser radicais.<br>Possuem apoio do governo por serem tratados como instituição religiosa.<br>Existe pouca informação sobre o grupo, pois são fechados a relações externas.",
-  "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "6Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
+  "Os antigos são um grupo formado por pessoas da burguesia antiga, são pessoas que defendem a volta dos velhos ideais e valores. Grande parte deste grupo são velhos militares, comerciantes de grande porte e donos de terra, possuem muito dinheiro para gastar como quiserem.<br><br><h4>Caracteristicas</h4>Grupo liderado por pessoas de idade.<br>Pouco aberto a novas ideias ou valores.<br>Possuem muitos recursos disponíveis.<br> Possuem muita influência em questão financeira, pois possuem controle de grande parte da riqueza do país.<br>Treinamento militar e equipamentos de última geração.",
+  "Os afogados são um grupo que abandonou a inconveniência da carne, são facilmente avistados em meio a multidão, pois já são mais máquinas do que humanos, possuem um tipo de fé que culpa a carne pela imperfeição. São uma família pequena, mas muito poderosa, possuem a força de braços de metal e a velocidade de pernas de carbono.<br><br><h4>Caracteristicas</h4>Possuem muitas modificações corporais.<br>São mais fortes e rápidos do que outras pessoas.<br>Um grupo com uma religião própria.<br>Uma família pequena em questão de membros.",
+  "Os adubados são um grupo liderado por jovens e acadêmicos que procuram melhorar ao máximo o corpo e mente humana a partir de mudanças químicas e biológicas. São um grupo aberto, querem divulgar sua mensagem em todos os meios possíveis, alguns membros são radicais e atualmente por serem um grupo grande, diversos conflitos internos começam a surgir. <br><br><h4>Caracteristicas</h4>Grupo liderado por jovens e acadêmicos.<br>Não é muito aberto para discussões sobre os temas que defendem.<br>São um grupo numeroso de pessoas.<br>São um grupo que possui recursos financeiros e de comunicação.<br>São contra o uso das modificações.",
+  "A matilha é a família com mais integrantes na cidade de São Paulo, são a forma que os marginalizados encontraram de se defenderem, tanto das outras famílias quanto do governo. É um grupo com poucos recursos financeiros, mas se mantém em pé de igualdade com as outras famílias em quesitos de influência e de combate.<br><br><h4>Caracteristicas</h4>Família com mais membros.<br>Poucos recursos financeiros comparado com as outras famílias.<br>Regras e valores internos próprios. Comércio interno.<br>Movimentações sociais mais intensas.",
+];
+
+const passivaSolo = [
+	"Você recebe +2 em testes de furtividade e percepção, sempre atento aos perigos ao seu redor. E sempre que cair a 0 pontos de vida, pode realizar um teste de resistência (Dificuldade 15). Se for bem-sucedido, permanece com 1 ponto de vida ao invés de desmaiar.",
+	"Você é visto como um monge, um guia espiritual, você recebe +2 em testes de diálogo. As curas que fizer ou receber têm + 2d6 como bônus, isto também conta para curas em si mesmo.",
+	"Você veio de uma família rica, começa com 5000 Bytes a mais. Sua infância inteira foi substituída por treinos para ser um soldado que o país nunca precisou. Escolha um atributo para receber +3 e receba 10 de vida a mais.",
+	"Sua primeira modificação foi adquirida aos 15 anos, um rito de passagem para os afogados, sua vida será em busca do equilíbrio entre, mente, alma e metal. Pode-se utilizar 2 modificações sem custo na humanidade.",
+	"Seu coração é rápido e jovem, sua alma procura mudança. Ganha mais +5 em rolagem de iniciativa, no seu primeiro turno você pode fazer duas ações normais.",
+	"Você cresceu e sobreviveu ao inferno no mundo, não é qualquer coisa que pode te derrubar. Seus testes de resistência e defesa recebem +2 de bônus e recebe +15 de vida.",
 ];
 
 const par2 = [
-  "Altamente religiosos, alguns chegam a ser radicais.<br>Possuem apoio do governo por serem tratados como instituição religiosa.<br>Existe pouca informação sobre o grupo, pois são fechados a relações externas.",
-  "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "6Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
+  "Seus testes recebem + 1 de vantagem",
+  "A vida dos membros da equipe aumenta em 2d10.",
+  "Todos os jogadores recebem 2500 Bytes no início da mesa.",
+  "Os membros da família recebem +2 de um atributo a escolha deles por cada modificação que eles tiverem.",
+  "Os membros da família recebem mais uma ação extra por turno.",
+  "cada membro da família, uma vez por mesa pode rodar o dado novamente caso o teste falhe.",
 ];
 
 const par3 = [
-  "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
-  "6Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra ex a velit mattis fringilla. Praesent condimentum nisl ex. Pellentesque at blandit lacus. Phasellus felis magna, suscipit non consequat nec, rutrum eu dui. Praesent orci quam, bibendum id sollicitudin lacinia, ultrices vel purus. Aenean tristique iaculis purus, eget mollis enim scelerisque a. Aenean placerat feugiat nisi. Cras pellentesque nisi vitae nibh dignissim lobortis. Nam a convallis leo.",
+  "Os dados 18 e 19 agora também contam como crítico.",
+  "Uma vez por mesa,a equipe pode recuperar 25 pontos de vida de todos os jogadores, esta ação não gasta turno.",
+  "Todos os integrantes da mesa recebem +2 em algum atributo a escolha da equipe e recebem 20 de vida a mais.",
+  "A equipe recebe um robô especial, os atributos desse robô são a média de todos os atributos equivalentes da equipe, o controle desse robô deve ser escolhido pela equipe para ficar com um membro da equipe durante a mesa.",
+  "A equipe pode recuar de uma batalha rapidamente por mesa, evitando perdas.",
+  "Na primeira vez que vocês forem morrer, ao invés de ir para o teste de resistência, retornam com 10% da vida máxima.",
 ];
 
 const btnEscolhaFam = [
@@ -206,6 +215,9 @@ const imagens2 = [
 let titFam1 = document.getElementById("tituFamEsc");
 titFam1.innerHTML = titFam[0];
 
+let passivaSoloTxt = document.getElementById("passivaSolo");
+passivaSoloTxt.innerHTML = passivaSolo[0];
+
 let para1 = document.getElementById("parag1Fam");
 para1.innerHTML = par1[0];
 
@@ -224,6 +236,10 @@ function updateTextFam() {
 
   const para1 = document.getElementById("parag1Fam");
   para1.innerHTML = par1[indexVetFam];
+  
+  const passivaSoloTxt = document.getElementById("passivaSolo");
+  passivaSoloTxt.innerHTML = passivaSolo[indexVetFam];
+  
 
   const para2 = document.getElementById("parag2Fam");
   para2.innerHTML = par2[indexVetFam];
